@@ -22,7 +22,7 @@
         <h1>Pauline Wahle</h1>
         <nav>
             <RouterLink to="/" :class="{ 'active-site': currentSite === 'home' }" 
-            @click="currentSite = 'home'" id="home">Home</RouterLink>
+            @click="currentSite = 'home'" id="home">Work</RouterLink>
             <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
         </nav>
         <ThemeToggle/>

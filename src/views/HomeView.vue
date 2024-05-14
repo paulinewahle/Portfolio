@@ -2,7 +2,9 @@
 import { useRouter } from 'vue-router';
 import Footer from '../components/Footer.vue';
 export default{
-  
+  props:{
+      links: Array,
+    },
   components: {
       Footer
   },
@@ -15,6 +17,11 @@ export default{
     return {
       workRoutes
     };
+  },
+  mounted() {
+    document.querySelector(".arrow-cursor").style.display = "none";
+    this.links.push(document.querySelector('.fade-item'))
+
   }
 }
 </script>

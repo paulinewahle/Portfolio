@@ -10,7 +10,7 @@ export default{
     <img src="../assets/img/profile.jpg" alt="profile picture">
     <div id="email">
       <a href="emailto:pauline.wahle@web.de" target="_blank">pauline.wahle@web.de</a>
-      <p>Get In Touch</p>
+      <h2>Get In Touch</h2>
     </div>
     <div id="links">
         <div class="link-container">
@@ -46,11 +46,10 @@ Coming from a degree in graphic design, and a following degree focusing on digit
     #left-wrapper, #right-wrapper{
       width: 50vw;
       height: 80vh;
-      border: 1px solid red;
       padding: 10vh 5vw;
       display: flex;
       flex-direction: column;
-      justify-content: flex-start;
+      justify-content: space-between;
     }
   
     #right-wrapper{
@@ -65,11 +64,11 @@ Coming from a degree in graphic design, and a following degree focusing on digit
       font-size: 1.3em;
     }
     img{
-      width: 12vw;
-      margin-bottom: 10%;
+      width: 20%;
+      
     }
     h2, a{
-      font-size: .8em;
+      font-size: .8rem;
       height: initial;
     }
     h2{
