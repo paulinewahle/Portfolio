@@ -1,0 +1,54 @@
+<script>
+import Case from "@/components/Case.vue";
+
+export default {
+components: {
+  Case
+},
+
+data() {
+  return {
+    pagetitle1: 'The Project',
+    pagetitle2: 'Research',
+    pagetitle3: 'Low-fi',
+    pagetitle4: 'Product',
+    pagetitle5: 'Product',
+    pagetitle6: 'Product',
+    pagetitle7: 'Responsive',
+    casename: 'Nordik',
+    casetext: 'Nordik is a webshop concept in minimalistic grid design. With a compact top-down deep information structure the design is user intuitive according to the sites hierarchical task analysis. The Figma project is part of the DailyUI Challenge, more of which to see on Dribble.',
+    casetype: 'E-commerce',
+    content1: '/cases/nordik/Nordik_1.mp4',
+    content2: '/cases/nordik/Nordik_2.jpg',
+    content3: '/cases/nordik/Nordik_3.jpg',
+    content4: '/cases/nordik/Nordik_4.jpg',
+    content5: '/cases/nordik/Nordik_5.jpg',
+    content6: '/cases/nordik/Nordik_6.jpg',
+    content7: '/cases/nordik/Nordik_7.jpg',
+  }
+}
+}
+</script>
+<template>
+<div>
+  <Case
+  :pagetitle1="pagetitle1" 
+  :pagetitle2="pagetitle2" 
+  :pagetitle3="pagetitle3" 
+  :pagetitle4="pagetitle4" 
+  :pagetitle5="pagetitle5" 
+  :pagetitle6="pagetitle6" 
+  :pagetitle7="pagetitle7" 
+  :casename="casename" 
+  :casetext="casetext" 
+  :casetype="casetype" 
+  :content1="content1"
+  :content2="content2"
+  :content3="content3"
+  :content4="content4"
+  :content5="content5"
+  :content6="content6"
+  :content7="content7"
+  />
+</div>
+</template>

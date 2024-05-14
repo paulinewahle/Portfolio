@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Mori";
+    src: url('./fonts/MoriGothic-Regular.ttf')  format('truetype');
+}
+
+$light-theme: (
+  background: #fafafa,
+  text: #2c2a2a
+);
+
+$dark-theme: (
+  background: #2c2a2a,
+  text: #fafafa
+);
+
+@function get-color($theme, $color-name) {
+  @return map-get($theme, $color-name);
+}
+
+[data-theme="light"] {
+  --background-color: #{get-color($light-theme, background)};
+  --text-color: #{get-color($light-theme, text)};
+}
+
+[data-theme="dark"] {
+  --background-color: #{get-color($dark-theme, background)};
+  --text-color: #{get-color($dark-theme, text)};
+}
+*{
+    box-sizing: border-box;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Mori';
+  padding: 0;
+  margin: 0;
+}
+main{
+    padding: 0;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+h1{
+    font-weight: 100;
+}
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
