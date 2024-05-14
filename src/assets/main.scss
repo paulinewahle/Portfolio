@@ -1,15 +1,23 @@
 @font-face {
-    font-family: "Mori";
+    font-family: "Mori Regular";
     src: url('./fonts/MoriGothic-Regular.ttf')  format('truetype');
+}
+@font-face {
+  font-family: "Mori Light";
+  src: url('./fonts/MoriGothic-Light.ttf')  format('truetype');
+}
+@font-face {
+  font-family: "Mori Bold";
+  src: url('./fonts/MoriGothic-Bold.ttf')  format('truetype');
 }
 
 $light-theme: (
   background: #fafafa,
-  text: #2c2a2a
+  text: #232323
 );
 
 $dark-theme: (
-  background: #2c2a2a,
+  background: #232323,
   text: #fafafa
 );
 
@@ -32,7 +40,7 @@ $dark-theme: (
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Mori';
+  font-family: 'Mori Light', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -45,7 +53,17 @@ main{
 h1{
     font-weight: 100;
 }
+h2{
+  font-family: 'Mori Bold', sans-serif;
+
+}
 a{
     text-decoration: none;
     color: var(--text-color);
+}
+a:hover{
+  font-style: italic;
+}
+p{
+  font-weight: 100;
 }

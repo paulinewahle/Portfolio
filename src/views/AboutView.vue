@@ -7,37 +7,32 @@ export default{
 
 <template>
   <div id="left-wrapper">
-    <div class="line"></div>
+    <img src="../assets/img/profile.jpg" alt="profile picture">
+    <div id="email">
+      <a href="emailto:pauline.wahle@web.de" target="_blank">pauline.wahle@web.de</a>
+      <p>Get In Touch</p>
+    </div>
+    <div id="links">
         <div class="link-container">
           <h2> Design </h2>
-          <div class="so-me-link">
-            <a href="https://www.behance.net/paulinewahle1" target="_blank" class="about-link"><p> Behance <p class="responsive arrow">&#8227;</p> </p></a>
-            <a href="https://dribbble.com/PaulineWahle" target="_blank" class="about-link"><p> Dribble <p class="responsive arrow">&#8227;</p> </p></a>
-            <a href="https://www.pinterest.de/PaulineWahle/" target="_blank" class="about-link"><p> Pinterest <p class="responsive arrow">&#8227;</p> </p></a>
-          </div>
+            <a href="https://www.behance.net/paulinewahle1" target="_blank" class="about-link">Behance</a>
+            <a href="https://dribbble.com/PaulineWahle" target="_blank" class="about-link">Dribble</a>
+            <a href="https://www.pinterest.de/PaulineWahle/" target="_blank" class="about-link">Pinterest</a>
         </div>
-        <div class="line"></div>
         <div  class="link-container">
           <h2> Code </h2>
-          <div class="so-me-link">
-            <a target="_blank" href="https://github.com/paulinewahle" class="about-link" ><p> Github <p class="responsive arrow">&#8227;</p> </p></a>
-            <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link"><p> CodePen<p class="responsive arrow">&#8227;</p> </p></a>
-          </div>
+            <a target="_blank" href="https://github.com/paulinewahle" class="about-link" >Github</a>
+            <a target="_blank" href="https://codepen.io/PaulineWahle" class="about-link">Codepen</a>
         </div>
-        <div @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'" class="link-container">
+        <div  class="link-container">
           <h2> Experience </h2>
-          <div class="so-me-link">
-            <a  target="_blank" href="https://www.linkedin.com/in/paulinewahle/" class="about-link"><p> LinkedIn<p class="responsive arrow">&#8227;</p> </p></a>
+            <a  target="_blank" href="https://www.linkedin.com/in/paulinewahle/" class="about-link">LinkedIn</a>
           </div>
-          </div>
-          <div class="line"></div>
-        <div @mouseover="width1 = '80%'" @mouseleave="width1 = '40%'" class="link-container">
+          <div  class="link-container">
           <h2> Recognition </h2>
-          <div class="so-me-link">
-            <a href="https://www.webguruawards.com/sites/paulinewahle-com" style="background: url(http://webguruawards.com/awards/GOTM/img_guru_of_the_month_gray.png) no-repeat; background-position: center right; background-size: contain; width:80px; height:80px; margin-top: 10%; " target="_blank" class="about-link"></a>
+            <a href="https://www.webguruawards.com/sites/paulinewahle-com" target="_blank" class="about-link"> WebGuru Awards</a>
           </div>
-          </div>
-      
+    </div>
   </div>
   <div id="right-wrapper">
     <p>Hello, I’m Pauline Wahle - user experience designer and frontend developer.
@@ -53,11 +48,49 @@ Coming from a degree in graphic design, and a following degree focusing on digit
       height: 80vh;
       border: 1px solid red;
       padding: 10vh 5vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+  
+    #right-wrapper{
+      padding: 10vh 15vw 10vh 0;
+    }
+    .link-container{
+      /* width: 70%; */
+      display: flex;
+      align-items: baseline;
+    }
+    #right-wrapper p{
+      font-size: 1.3em;
+    }
+    img{
+      width: 12vw;
+      margin-bottom: 10%;
+    }
+    h2, a{
+      font-size: .8em;
+      height: initial;
+    }
+    h2{
+      text-transform: uppercase;
+      width: 30%;
+      font-weight: bold;
+      margin: 0;
+    }
+    a{
+      margin-right: 1em;
+    }
+    p{
+      margin: 0;
+    }
+    #email a{
+      font-size: 1.5em;
+      font-family: 'Mori Bold', sans-serif;
+      margin: 0;
     }
     
-    img{
-      height: 20vh;
-      width: auto;
-    }
+
+    
   }
 </style>

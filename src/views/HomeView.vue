@@ -1,7 +1,11 @@
 <script lang>
 import { useRouter } from 'vue-router';
+import Footer from '../components/Footer.vue';
 export default{
-  name: 'Navigation',
+  
+  components: {
+      Footer
+  },
   setup() {
     const router = useRouter();
     const routes = router.getRoutes(); // Access the routes
@@ -23,10 +27,9 @@ export default{
           <router-link :to="route.path">{{ route.name }}</router-link>
         </li>
     </ul>
-   
   </nav>
-
   </div>
+  <Footer />
 </template>
 
 <style scoped>

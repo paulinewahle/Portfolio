@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import ThemeToggle from './components/ThemeToggle.vue';
 import Header from './components/Header.vue';
-import Footer from './components/Footer.vue';
+
 import './assets/main.scss'; 
 
 
@@ -11,7 +11,7 @@ export default {
     components: {
       ThemeToggle,
       Header,
-      Footer
+      
     }
 };
 </script>
@@ -21,7 +21,7 @@ export default {
   <main>
     <RouterView />
   </main>
-  <Footer />
+ 
   
 </template>
 
