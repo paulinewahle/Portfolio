@@ -1,23 +1,14 @@
 <script lang>
-import { useRouter } from 'vue-router';
 export default{
-  name: 'Navigation',
-  setup() {
-    const router = useRouter();
-    const routes = router.getRoutes(); // Access the routes
-    const excludedRoutes = ['home', 'PageNotFound', 'about']; // Add any other route names you want to exclude
-    const workRoutes = routes.filter(route => !excludedRoutes.includes(route.name));
+  
 
-    return {
-      workRoutes
-    };
-  }
 }
 </script>
 
 <template>
   <div id="left-wrapper">
-
+    <img src="../assets/img/profile.jpg" alt="profile picture">
+    <a target="_blank" href="mailto:pauline.wahle@web.de">pauline.wahle@web.de</a>
   </div>
   <div id="right-wrapper">
     <p>Hello, I’m Pauline Wahle - user experience designer and frontend developer.
@@ -28,6 +19,16 @@ Coming from a degree in graphic design, and a following degree focusing on digit
 
 <style scoped>
   @media (min-width: 992px) {
-
+    #left-wrapper, #right-wrapper{
+      width: 50vw;
+      height: 80vh;
+      border: 1px solid red;
+      padding: 10vh 5vw;
+    }
+    
+    img{
+      height: 20vh;
+      width: auto;
+    }
   }
 </style>
