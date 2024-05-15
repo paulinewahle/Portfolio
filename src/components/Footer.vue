@@ -1,5 +1,17 @@
 <script lang>
-    
+export default{
+    mounted() {
+    const percentLabel = document.querySelector("#percent");
+      window.addEventListener("scroll", () => {
+        let scrollTop = window.scrollY;
+        let docHeight = document.documentElement.scrollHeight; // Correctly get the document height
+        let winHeight = window.innerHeight;
+        let scrollPercent = scrollTop / (docHeight - winHeight);
+        let scrollPercentRounded = Math.min(100, Math.round(scrollPercent * 100));
+        percentLabel.innerHTML = `${scrollPercentRounded}%`;
+      });
+    }
+}
 
 </script>
 
@@ -11,6 +23,12 @@
             <a href="https://dribbble.com/PaulineWahle" target="_blank"> Dribble </a>
             <a target="_blank" href="https://github.com/paulinewahle"> Github </a>
         </nav>
+        
+        <p class="desktop" id="scrollbutton">Scroll to continue . . .</p>
+        <p id="scroll-percentage" class="desktop">
+        <span id="percent"></span>
+        
+        </p>
     </footer>
 </template>
 
@@ -23,14 +41,23 @@
         align-items: center;
         position: fixed;
         top: 90vh;
-        border: 1px solid;
+        z-index: 1000;
     }
     nav{
         width: 20vw;
         display: flex;
         justify-content: space-between;
-        margin-left: 50vw;
+        margin-left: 5vw;
         font-size: .9em;
     }
+    #scrollbutton{
+        position: absolute;
+        left: 50vw;
+    }
+    #scroll-percentage{
+        position: absolute;
+        left: 93vw;
+    }
+
     
 </style>

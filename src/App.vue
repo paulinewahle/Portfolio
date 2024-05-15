@@ -22,9 +22,7 @@ export default {
 <template>
   
   <Header />
-  <main>
     <RouterView/>
-  </main>
   <Cursor />
   
 </template>

@@ -32,6 +32,7 @@
 }
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -43,10 +44,10 @@ body {
 }
 
 main {
-  padding: 0;
-  height: 80vh;
+  height: 100vh;
   display: flex;
   align-items: center;
+  padding: 10vh 5vw;
 }
 
 h1 {

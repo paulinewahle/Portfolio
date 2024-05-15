@@ -31,40 +31,59 @@ export default{
 
 <template>
   <div class="work-view">
-  <div id="link-wrapper">
-    <nav>
-    <ul>
-        <li class="fade-item" v-for="route in workRoutes" :key="route.name" >
-          <router-link :to="route.path">{{ route.name }}</router-link>
-        </li>
-    </ul>
-    </nav>
+    <div class="flex-half">
+      <div id="case-img"></div>
     </div>
-  </div>
+    <div class="flex-half">
+      <ul>
+          <li class="fade-item" v-for="route in workRoutes" :key="route.name" >
+            <router-link :to="route.path">{{ route.name }}</router-link>
+          </li>
+      </ul>
+    </div>
+    
+    </div>
+  
   
 </template>
 
 <style scoped>
 .work-view{
+  display: none;
+  position: fixed;
+  top: 0;
+  height: 100vh;
   width: 100vw;
-  border: 1px solid;
-  left: 0;
+  padding: 10vh 5vw;
 }
-  ul{
-    width: 50vw;
-    position: relative;
-    /* left: 50vw; */
-    padding: 0;
-  }
-  li{
-    opacity: 0;
-    list-style: none;
-    text-transform: uppercase;
-    font-size: 4em;
-    animation: fadeIn 1s;
-    animation: fadeIn 1s forwards;
-    animation-delay: var(--fade-delay);
-  }
+.flex-half{
+  width: 50%;
+  height: 100%;
+  align-content: end;
+}
+#case-img{
+  background-color: grey;
+  height: 25rem;
+  width: 20rem;
+}
+ul{
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+li{
+  opacity: 0;
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 4em;
+  animation: fadeIn 1s;
+  animation: fadeIn 1s forwards;
+  animation-delay: var(--fade-delay);
+}
   
   @keyframes fadeIn {
   0% { opacity: 0; }

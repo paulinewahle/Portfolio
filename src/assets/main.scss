@@ -46,6 +46,7 @@ $dark-theme: (
 }
 *{
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body {
   background-color: var(--background-color);
@@ -55,10 +56,10 @@ body {
   margin: 0;
 }
 main{
-    padding: 0;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     align-items: center;
+    padding: 10vh 5vw;
 }
 h1{
     font-weight: 100;
