@@ -23,7 +23,7 @@ export default {
   
   <Header />
   <main>
-    <RouterView :links="links"/>
+    <RouterView/>
   </main>
   <Cursor />
   

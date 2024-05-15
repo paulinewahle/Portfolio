@@ -34,6 +34,16 @@ $dark-theme: (
   --background-color: #{get-color($dark-theme, background)};
   --text-color: #{get-color($dark-theme, text)};
 }
+@media (min-width: 200px) {
+  .responsive{
+    display: inline-block;
+  }
+}
+@media (min-width: 992px) {
+  .responsive{
+    display: none;
+  }
+}
 *{
     box-sizing: border-box;
 }

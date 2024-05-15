@@ -34,7 +34,7 @@
 }
 @media (min-width: 992px) {
     header{
-        max-width: 100vw;
+        width: 100vw;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -43,6 +43,8 @@
         box-sizing: border-box;
         padding: 3vh 5vw;
         height: 10vh;
+        z-index: 1000;
+        position: fixed;
     }
     h1{
         font-size: 1em;
@@ -50,10 +52,9 @@
     }
     nav{
         height: initial;
-        position: absolute;
-        left: 50vw;
         text-transform: uppercase;
         font-style: normal;
+        margin-left: calc(50vw - 50%);
     }
     nav a{
         padding-right: 2em;

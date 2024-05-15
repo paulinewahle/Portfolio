@@ -88,8 +88,5 @@ Coming from a degree in graphic design, and a following degree focusing on digit
       font-family: 'Mori Bold', sans-serif;
       margin: 0;
     }
-    
-
-    
   }
 </style>

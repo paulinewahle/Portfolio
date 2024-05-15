@@ -29,6 +29,6 @@ export default{
         border-radius: 50%;
         outline: none;
         border: none;
-        background-color: var(--text-color);;
+        background-color: var(--text-color);
     }
 </style>

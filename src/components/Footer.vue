@@ -21,6 +21,9 @@
         width: 100vw;
         display: flex;
         align-items: center;
+        position: fixed;
+        top: 90vh;
+        border: 1px solid;
     }
     nav{
         width: 20vw;
