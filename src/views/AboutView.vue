@@ -6,8 +6,10 @@ export default{
 </script>
 
 <template>
+  <div id="about-view">
   <div id="left-wrapper">
-    <img src="../assets/img/profile.jpg" alt="profile picture">
+    <div id="profile-pic"></div>
+    
     <div id="email">
       <a href="emailto:pauline.wahle@web.de" target="_blank">pauline.wahle@web.de</a>
       <h2>Get In Touch</h2>
@@ -39,21 +41,27 @@ export default{
 Coming from a degree in graphic design, and a following degree focusing on digital spaces with studies in user experience and front-end development, I draw from a wholistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.
     </p>
   </div>
+</div>
 </template>
 
 <style scoped>
   @media (min-width: 992px) {
+    #about-view{
+      display: flex;
+      flex-direction: row;
+    }
     #left-wrapper, #right-wrapper{
+      border: 1px solid;
       width: 50vw;
-      height: 80vh;
-      padding: 10vh 5vw;
+      height: 100vh;
+      padding: 15vh 5vw;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
   
     #right-wrapper{
-      padding: 10vh 15vw 10vh 0;
+      padding-left:  0;
     }
     .link-container{
       /* width: 70%; */
@@ -61,11 +69,16 @@ Coming from a degree in graphic design, and a following degree focusing on digit
       align-items: baseline;
     }
     #right-wrapper p{
-      font-size: 1.3em;
+      font-size: 1.8em;
+      height: 100%;
+      width: 80%;
     }
-    img{
-      width: 20%;
-      
+    #profile-pic{
+      background-image: url(../assets/img/profile.jpg);
+      background-size: cover;
+      background-position: center top;
+      height: 25rem;
+      width: 20rem;
     }
     h2, a{
       font-size: .8rem;

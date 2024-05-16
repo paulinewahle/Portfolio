@@ -7,21 +7,7 @@ export default {
     }
   },
   mounted() {
-    let id = 0
     
-    const loadingInterval = setInterval(displayIntroItem, 1500)
-    function displayIntroItem() {
-      id++
-      let item = document.getElementById("intro-loop-item"+id)
-      item.style.display = "block"
-      setTimeout(() => {
-        item.style.display = "none"
-      }, 1500)
-
-      if (id>=6){
-      clearInterval(loadingInterval)
-      }
-    }
     
   }
 }
@@ -30,25 +16,11 @@ export default {
 
 <template>
     <div id="loading" class="desktop">
+      <h2>Pauline <br> Wahle <br> </h2>
       <ul>
-        <li class="intro-loop-item" id="intro-loop-item1">
-          Design Concepts
-        </li>
-        <li class="intro-loop-item" id="intro-loop-item2">
-          User Experience
-        </li>
-        <li class="intro-loop-item" id="intro-loop-item3">
-          Web Design
-        </li>
-        <li class="intro-loop-item" id="intro-loop-item4">
-          Frontend Development
-        </li>
-        <li class="intro-loop-item" id="intro-loop-item5">
-          Graphic Design
-        </li>
-        <li class="intro-loop-item" id="intro-loop-item6">
-          Digital Interfaces
-        </li>
+        <li>User</li>
+        <li>Experience</li>
+        <li>Design</li>
       </ul>
     </div>
 </template>
@@ -60,9 +32,9 @@ export default {
 
 @media (min-width: 992px) {
   #loading {
+    background-color: var(--background-color);
     position: fixed;
     z-index: 10000000;
-    background-color: #fafafa;
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -72,35 +44,44 @@ export default {
     align-items: center;
     font-size: 1.5em;
   }
-  ul{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
-    text-align: center;
+  h2, ul{
+    font-size: 1em;
+    width: 10vw;
+    position: fixed;
+    height: 5em;
+    line-height: 1.2em;
   }
-  .intro-loop-item{
-    display: none;
-    position: relative;
-    animation: fade 2s;
+  h2{
+    left: 40vw;
+    text-align: end;
+    font-family: "Mori Light";
+    font-weight: 100;
+  }
+  ul{
+    list-style: none;
+    text-indent: none;
+    padding: 0;
+    left: 51vw;
+    font-family: "Mori Bold";
+    
   }
   li{
-    font-family: "serif", serif;
-    src: url('./fonts/Butler/Butler_Light.otf')  format('opentype');
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: var(--fade-delay);
   }
-  @keyframes fade{
-    0%   {
-      filter: blur(5px);
-      opacity: 0;
-    }
-    50%  {
-      filter: blur(0px);
-      opacity: 1;
-    }
-    100% {
-      filter: blur(5px);
-      opacity: 0;
-    }
-  }
+  
+  li:nth-child(1) {
+  --fade-delay: .3s;
+}
+
+li:nth-child(2) {
+  --fade-delay: .6s;
+}
+
+li:nth-child(3) {
+  --fade-delay: .9s;
+}
+
 }
   </style>

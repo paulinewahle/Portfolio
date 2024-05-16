@@ -80,15 +80,11 @@ li{
   list-style: none;
   text-transform: uppercase;
   font-size: 4em;
-  animation: fadeIn 1s;
   animation: fadeIn 1s forwards;
   animation-delay: var(--fade-delay);
 }
   
-  @keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
+  
 
 
 li:nth-child(1) {

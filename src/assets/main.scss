@@ -5,10 +5,12 @@
 @font-face {
   font-family: "Mori Light";
   src: url('./fonts/MoriGothic-Light.ttf')  format('truetype');
+  font-weight: 100;
 }
 @font-face {
   font-family: "Mori Bold";
   src: url('./fonts/MoriGothic-Bold.ttf')  format('truetype');
+  font-weight: 800;
 }
 
 $light-theme: (
@@ -44,6 +46,10 @@ $dark-theme: (
     display: none;
   }
 }
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
 *{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -59,7 +65,7 @@ main{
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 10vh 5vw;
+    padding: 15vh 5vw;
 }
 h1{
     font-weight: 100;
