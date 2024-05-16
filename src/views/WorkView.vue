@@ -21,6 +21,17 @@ export default{
       workRoutes
     };
   },
+  methods:{
+    revealCaseImg: (image) => {
+      document.querySelector("#case-img").style.backgroundImage = 'url("' + image + '")';
+      document.querySelector("#case-img").style.opacity = "1";
+      document.querySelector("#case-img").style.filter = "blur(0)";
+    },
+    hideCaseImg: () => {
+      document.querySelector("#case-img").style.opacity = "0";
+      document.querySelector("#case-img").style.filter = "blur(10px)";
+    },
+  },
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
     // this.links.push(document.querySelector('.fade-item'))
@@ -36,10 +47,30 @@ export default{
     </div>
     <div class="flex-half">
       <ul>
+        <router-link to="/coriander" class="work-link" @mouseover=' revealCaseImg("/cases/coriander/Coriander.jpg");' @mouseleave="hideCaseImg();">
+        Coriander
+        </router-link>
+        <router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/cases/nordik/Nordik.jpg");' @mouseleave="hideCaseImg();">
+        Nordik
+        </router-link>
+        <router-link to="/gamel" class="work-link" @mouseover=' revealCaseImg("/cases/gamel/Gamel.jpg");' @mouseleave="hideCaseImg();">
+        Gamél
+        </router-link>
+        <router-link to="/skilled" class="work-link" @mouseover=' revealCaseImg("/cases/skilled/Skilled.jpg");' @mouseleave="hideCaseImg();">
+        Skilled
+        </router-link>
+        <router-link to="/concreate" class="work-link" @mouseover=' revealCaseImg("/cases/concreate/Concreate.jpg");' @mouseleave="hideCaseImg();">
+        Concreate
+        </router-link>
+        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/cases/hitech/Hitech.jpg");' @mouseleave="hideCaseImg();">
+        HiTech
+        </router-link>
+      </ul>
+      <!-- <ul>
           <li class="fade-item" v-for="route in workRoutes" :key="route.name" >
             <router-link :to="route.path">{{ route.name }}</router-link>
           </li>
-      </ul>
+      </ul> -->
     </div>
     
     </div>
@@ -62,9 +93,13 @@ export default{
   align-content: end;
 }
 #case-img{
-  background-color: grey;
   height: 25rem;
   width: 20rem;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  transition: all 1s ease;
+  filter: blur(10px);
 }
 ul{
   position: relative;
@@ -75,7 +110,7 @@ ul{
   flex-direction: column;
   justify-content: space-between;
 }
-li{
+a{
   opacity: 0;
   list-style: none;
   text-transform: uppercase;
@@ -87,26 +122,24 @@ li{
   
 
 
-li:nth-child(1) {
+a:nth-child(1) {
   --fade-delay: 0s;
 }
 
-li:nth-child(2) {
+a:nth-child(2) {
   --fade-delay: 0.1s;
 }
-
-li:nth-child(3) {
+a:nth-child(3) {
   --fade-delay: 0.2s;
 }
 
-li:nth-child(4) {
+a:nth-child(4) {
   --fade-delay: 0.3s;
 }
-
-li:nth-child(5) {
+a:nth-child(5) {
   --fade-delay: 0.4s;
 }
-li:nth-child(6) {
+a:nth-child(6) {
   --fade-delay: 0.5s;
 }
 
