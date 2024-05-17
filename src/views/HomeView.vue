@@ -21,22 +21,33 @@ export default{
     }, 15000);
 
 
-    window.onscroll = function() {scrollTransition(); frameTransition()};
+    window.onscroll = function() {scrollTransition()};
     function scrollTransition() {
-      if (document.documentElement.scrollTop > 300) {
+      var frame = document.querySelector('#frame');
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      var documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+      var halfwayPoint = documentHeight / 2;
+      var scrollFraction = Math.min(scrollTop / halfwayPoint, 1);
+
+      var maxBorderHeight = 30; // 30vh
+      var maxBorderWidth = 40;  // 40vw
+
+      var newBorderHeight = scrollFraction * maxBorderHeight;
+      var newBorderWidth = scrollFraction * maxBorderWidth;
+
+      frame.style.borderWidth = newBorderHeight + 'vh ' + newBorderWidth + 'vw';
+
+      if (document.documentElement.scrollTop > documentHeight / 1.2) {
         document.querySelector(".text-cursor").style.display = "none";
         document.querySelector(".work-view").style.display = "flex";
       }
-      else if (document.documentElement.scrollTop < 300){
+      else if (document.documentElement.scrollTop < documentHeight / 1.2){
         document.querySelector(".text-cursor").style.display = "block";
         document.querySelector(".work-view").style.display = "none";
       }
       else{
         document.querySelector(".work-view").style.display = "none";
       }
-    }
-    function frameTransition(){
-      // document.querySelector('#frame').classList.add('frameAnimation');
     }
 
     
@@ -70,8 +81,8 @@ body{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* border: solid var(--background-color); */
-  border: solid red;
+  border: solid var(--background-color);
+  /* border: solid blue; */
   z-index: 10;
   pointer-events: none;
   } 

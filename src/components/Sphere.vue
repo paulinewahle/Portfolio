@@ -16,7 +16,7 @@ export default{
 
    mounted(){
         
-    const hdrTextureURL = new URL('../assets/img/mymind2.hdr', import.meta.url);
+    const hdrTextureURL = new URL('../assets/img/swirl1.hdr', import.meta.url);
     
     //Loading
     const textureLoader = new THREE.TextureLoader();
@@ -118,11 +118,34 @@ export default{
         
     }
     }
+    class CustomMouseFollowControl {
+    constructor(camera, canvas) {
+        this.camera = camera;
+        this.canvas = canvas;
 
-    const controls = new CustomOrbitControls(camera, canvas)
+        this.mouseX = 0;
+        this.mouseY = 0;
+
+        this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this), false);
+    }
+
+    onMouseMove(event) {
+        this.mouseX = (event.clientX / this.canvas.width) * 2 - 1;
+        this.mouseY = - (event.clientY / this.canvas.height) * 2 + 1;
+    }
+
+    update() {
+        this.camera.position.x += (this.mouseX - this.camera.position.x) * 0.05;
+        this.camera.position.y += (- this.mouseY - this.camera.position.y) * 0.05;
+
+        this.camera.lookAt(0, 0, 0);
+    }
+}
+
+    const controls = new CustomMouseFollowControl(camera, canvas)
     controls.enableDamping = true
 
-    
+
 
     /**
      * Renderer
@@ -191,8 +214,8 @@ export default{
         gsap.to(sphere.material, {
             scrollTrigger: {
             trigger: "body",
-            start: "top top",
-            end: "bottom top",
+            start: "center center",
+            end: "bottom bottom",
             duration: 2.5, 
             yoyoEase: true,
             scrub: true,
@@ -251,7 +274,7 @@ body{
     left: 0;
     outline: none;
     z-index: 2;
-    pointer-events: none;
+    /* pointer-events: none; */
 }
 
 

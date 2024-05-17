@@ -86,6 +86,7 @@ export default{
   height: 100vh;
   width: 100vw;
   padding: 10vh 5vw;
+  z-index: 20;
 }
 .flex-half{
   width: 50%;
