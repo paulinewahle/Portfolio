@@ -41,7 +41,7 @@ export default{
 </script>
 
 <template>
-  <div class="work-view">
+  <div class="work-view" >
     <div class="flex-half">
       <div id="case-img"></div>
     </div>
@@ -85,7 +85,7 @@ export default{
   top: 0;
   height: 100vh;
   width: 100vw;
-  padding: 10vh 5vw;
+  padding: 15vh 5vw;
   z-index: 20;
 }
 .flex-half{

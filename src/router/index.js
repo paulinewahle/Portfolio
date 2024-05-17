@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import PageNotFound from '/src/views/PageNotFound.vue'
 import LoadingView from '/src/views/LoadingView.vue'
 import HomeView from '/src/views/HomeView.vue'
+import WorkView from '/src/views/WorkView.vue'
 import AboutView from '/src/views/AboutView.vue'
 import NordikView from '/src/views/cases/NordikView.vue'
 import ConcreateView from '/src/views/cases/ConcreateView.vue'
@@ -19,7 +20,7 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'smooth',
+        behavior: 'auto',
       }
     }
   },
@@ -29,15 +30,20 @@ const router = createRouter({
       name: 'PageNotFound',
       component: PageNotFound
     },
-    // {
-    //   path: '/',
-    //   name: 'loading',
-    //   component: LoadingView
-    // },
     {
       path: '/',
-      name: 'home',
+      name: 'loading',
       component: LoadingView
+    },
+    {
+      path: '/home',
+      name: 'home',
+      component: HomeView
+    },
+    {
+      path: '/home#work',
+      name: 'work',
+      component: WorkView
     },
     {
       path: '/about',

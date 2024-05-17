@@ -14,7 +14,6 @@
     "horizontal-scroll": "^1.1.0",
     "three": "^0.144.0",
     "vue": "^3.4.21",
-    "vue-scrollto": "^2.20.0",
     "vue-router": "^4.3.0",
     "vue-anchor-router-link": "^0.8.5",
     "vue-horizontal-scroll": "^0.2.4"

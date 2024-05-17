@@ -60,7 +60,9 @@ export default{
    
     <div id="frame"></div>
     <Sphere />
+    <div id="work">
     <WorkView />
+    </div>
     <Footer />
 
 </template>

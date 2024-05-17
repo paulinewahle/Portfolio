@@ -52,7 +52,7 @@ $dark-theme: (
 }
 *{
     box-sizing: border-box;
-    scroll-behavior: smooth;
+    // scroll-behavior: auto;
 }
 body {
   background-color: var(--background-color);

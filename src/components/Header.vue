@@ -19,9 +19,9 @@
 </script>
 <template>
     <header>
-        <h1>Pauline Wahle</h1>
+        <RouterLink to="/home">Pauline Wahle</RouterLink>
         <nav>
-            <RouterLink to="/" :class="{ 'active-site': currentSite === 'home' }" 
+            <RouterLink to="/home#work" :class="{ 'active-site': currentSite === 'home' }" 
             @click="currentSite = 'home'" id="home">Work</RouterLink>
             <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
         </nav>
