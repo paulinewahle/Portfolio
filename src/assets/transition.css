@@ -52,7 +52,7 @@ animation: leftEnter 1s;
 @keyframes rightLeave {
   0% {
     opacity: 1;
-    transform: translateX(0vw);
+    transform: translateX(0vw); 
   }
   100% {
     opacity: 0;

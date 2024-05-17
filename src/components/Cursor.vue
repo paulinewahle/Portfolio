@@ -128,7 +128,6 @@ export default{
         display: block;
         filter: blur(0px);
         position: fixed;
-        transition:  all .1s ease;
         z-index: 1001;
         pointer-events: none;
         text-transform: uppercase;
