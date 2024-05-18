@@ -70,15 +70,15 @@ Coming from a degree in graphic design, and a following degree focusing on digit
     }
     #right-wrapper p{
       font-size: 1.8em;
-      height: 100%;
+      line-height: 100%;
       width: 80%;
     }
     #profile-pic{
       background-image: url(../assets/img/profile.jpg);
       background-size: cover;
       background-position: center top;
-      height: 25rem;
-      width: 20rem;
+      height: 20rem;
+      width: 15rem;
     }
     h2, a{
       font-size: .8rem;

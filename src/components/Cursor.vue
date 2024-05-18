@@ -103,12 +103,12 @@ export default{
         margin-top: -15px;
         margin-left: -15px;
         pointer-events: none;
-        background-color: black;
+        background-color: var(--text-color);
         border-radius: 50%;
         filter: blur(7px) grayscale(1);  
         transition: scale 0.3s ease-in-out;
         position: fixed;
-        z-index: 5;
+        z-index: 500;
         display: flex;
         justify-content: center;
         align-items: center;

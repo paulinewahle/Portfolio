@@ -116,6 +116,7 @@ a{
   list-style: none;
   text-transform: uppercase;
   font-size: 4em;
+  line-height: 100%;
   animation: fadeIn 1s forwards;
   animation-delay: var(--fade-delay);
 }

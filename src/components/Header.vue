@@ -54,7 +54,7 @@
         height: initial;
         text-transform: uppercase;
         font-style: normal;
-        margin-left: calc(50vw - 50%);
+        margin-left: calc(50vw - 48%);
     }
     nav a{
         padding-right: 2em;

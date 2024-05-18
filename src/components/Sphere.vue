@@ -15,8 +15,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 export default{
 
    mounted(){
-        
-    const hdrTextureURL = new URL('../assets/img/test7.hdr', import.meta.url);
+        //1,5,8
+    const hdrTextureURL = new URL('../assets/img/Untitled-1.hdr', import.meta.url);
     
     //Loading
     const textureLoader = new THREE.TextureLoader();
