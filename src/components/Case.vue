@@ -34,17 +34,21 @@ export default {
       currentTransition: '',
     }
   },
-  methods:{ 
-    hideElement(content, imgId, vidId) {
-      if (content.includes('.mp4')) {
-        document.querySelector(imgId).style.display = 'none';
-      } 
-      else if (content.includes('.jpg') || content.includes('.png')) {
-        document.querySelector(vidId).style.display = 'none';
-      }
-    }
+  // methods:{ 
+  //   hideElement(content, imgId, vidId) {
+  //     if (content && content.includes('.mp4')) {
+  //       document.querySelector(imgId).style.display = 'none';
+  //       document.querySelector(vidId).style.display = 'block';
+  //     } else if (content && (content.includes('.jpg') || content.includes('.png'))) {
+  //       document.querySelector(vidId).style.border = 'blue 4px solid';
+  //       document.querySelector(imgId).style.display = 'block';
+  //     } else {
+  //       document.querySelector(imgId).style.display = 'none';
+  //       document.querySelector(vidId).style.display = 'none';
+  //     }
+  //   }
     
-  },
+  // },
   mounted(){
     document.querySelector(".text-cursor").style.display = "none";
 
@@ -144,13 +148,13 @@ export default {
 
     
 
-    this.hideElement(this.content1, "#img1", "#vid1");
-    this.hideElement(this.content2, "#img2", "#vid2");
-    this.hideElement(this.content3, "#img3", "#vid3");
-    this.hideElement(this.content4, "#img4", "#vid4");
-    this.hideElement(this.content5, "#img5", "#vid5");
-    this.hideElement(this.content6, "#img6", "#vid6");
-    this.hideElement(this.content7, "#img7", "#vid7");
+    // this.hideElement(this.content1, "#img1", "#vid1");
+    // this.hideElement(this.content2, "#img2", "#vid2");
+    // this.hideElement(this.content3, "#img3", "#vid3");
+    // this.hideElement(this.content4, "#img4", "#vid4");
+    // this.hideElement(this.content5, "#img5", "#vid5");
+    // this.hideElement(this.content6, "#img6", "#vid6");
+    // this.hideElement(this.content7, "#img7", "#vid7");
 
 
 
@@ -225,62 +229,64 @@ export default {
       </div>
       
 
-    <div id="page-container">
+      <div id="page-container">
         <Transition :name="this.currentTransition">
         <div v-if="page1" class="page" id="page1">
-          <video  autoplay loop muted>
+          <video v-if="content1 && content1.includes('.mp4')" autoplay loop muted>
             <source :src="content1" type="video/mp4">
           </video>
-          <img :src="content1" alt="">
+          <img v-if="content1 && (content1.includes('.jpg') || content1.includes('.png'))" :src="content1" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="page2" class="page" id="page2">
-          <!-- <p>{{casetext}}</p> -->
-          <video  autoplay loop muted>
+          <p id="descr">{{casetext}}</p>
+          <video v-if="content2 && content2.includes('.mp4')" autoplay loop muted>
             <source :src="content2" type="video/mp4">
           </video>
-          <img :src="content2" alt="">
+          <img v-if="content2 && (content2.includes('.jpg') || content2.includes('.png'))" :src="content2" alt="">
         </div>
         </Transition>
         <Transition  :name="this.currentTransition">
         <div v-if="page3" class="page" id="page3">
-          <video  autoplay loop muted>
+          
+          <video  v-if="content3 && content3.includes('.mp4')" autoplay loop muted>
             <source :src="content3" type="video/mp4">
           </video>
-          <img :src="content3" alt="">
+          <img v-if="content3 && (content3.includes('.jpg') || content3.includes('.png'))" :src="content3" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="page4" class="page" id="page4">
-          <video  autoplay loop muted>
+          <p id="descr">{{casetext}}</p>
+          <video  v-if="content4 && content4.includes('.mp4')" autoplay loop muted>
             <source :src="content4" type="video/mp4">
           </video>
-          <img :src="content4" alt="">
+          <img v-if="content4 && (content4.includes('.jpg') || content4.includes('.png'))" :src="content4" alt="">
         </div>
         </Transition>
         <Transition :name="currentTransition">
         <div v-if="page5" class="page" id="page5">
-          <video  autoplay loop muted>
+          <video  v-if="content5 && content5.includes('.mp4')" autoplay loop muted>
             <source :src="content5" type="video/mp4">
           </video>
-          <img :src="content5" alt="">
+          <img v-if="content5 && (content5.includes('.jpg') || content5.includes('.png'))" :src="content5" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="page6" class="page" id="page6">
-          <video  autoplay loop muted>
+          <video  v-if="content6 && content6.includes('.mp4')" autoplay loop muted>
             <source :src="content6" type="video/mp4">
           </video>
-          <img :src="content6" alt="">
+          <img v-if="content6 && (content6.includes('.jpg') || content6.includes('.png'))" :src="content6" alt="">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="page7" class="page" id="page7">
-          <video  autoplay loop muted>
+          <video  v-if="content7 && content7.includes('.mp4')" autoplay loop muted>
             <source :src="content7" type="video/mp4">
           </video>
-          <img :src="content7" alt="">
+          <img v-if="content7 && (content7.includes('.jpg') || content7.includes('.png'))" :src="content7" alt="">
         </div>
         </Transition>
     </div>
@@ -303,53 +309,51 @@ export default {
   h1{
     margin-top: 20vh;
   }
+  h4{
+    font-family: 'Serif', serif;
+  }
 }
 @media (min-width: 992px) {
 
-  #descr{
-    position: absolute;
-    z-index: 100;
-    margin: 0;
-    top: 15vh;
-    width: 25vw;
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  h1{
-    margin: 20% 0 5vh 0;
-  }
-  a{
-    font-style: italic;
-    text-decoration: underline;
-  }
-  #page-container{
-    box-sizing: border-box;
-    overflow: hidden;
-    top: 10vh;
-    left: 0vw;
-    height: 80vh;
-    width: 100vw;
-    position: absolute;
-  }
-  .page{
-    position: absolute;
-    box-sizing: border-box;
-    overflow: hidden;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    /* justify-content: flex-end; */
-    height: 100%;
-    width: 100%;
-  }
-  img, video{
-    height: 100%;
-    /* width: 70%; */
-    margin: 0;
-  }
-  #page-numbers{
+#page-container{
+  box-sizing: border-box;
+  overflow: hidden;
+  top: 10vh;
+  height: 80vh;
+  width: 100vw;
+  position: absolute;
+}
+.page{
+  position: absolute;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+img, video{
+  /* height: auto; */
+  width: 100%;
+  object-fit: contain;
+  padding: 0 1%;
+}
+#descr{
+  height: 100%;
+  min-width: 20vw;
+  display: block;
+  margin: 0 5vw;
+  border: 1px solid;
+}
+.back{
+  display: block;
+  margin-top: 15vh;
+  text-decoration: none; 
+  font-size: 1em;
+}
+#page-numbers{
     position: fixed;
     top: 90vh;
     left: 50vw;
@@ -396,14 +400,10 @@ export default {
       width: 40%;
     }
   }
-  .back{
-    display: block;
-    margin-top: 15vh;
-    text-decoration: none; 
-    font-size: 1em;
-  }
-  
+
 
 }
+
+
 
 </style>

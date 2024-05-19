@@ -4,14 +4,14 @@
 }
 .fade-enter-from,
 .fade-leave-to {
-  opacity: 0;
+  opacity: 1;
 }
 .right-enter-active{
   animation: rightEnter 1s;
 }
 @keyframes rightEnter {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(100vw);
   }
   100% {
@@ -28,7 +28,7 @@ animation: leftLeave 1s;
     transform: translateX(0vw);
   }
   100% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(-100vw);
   }
 }
@@ -38,7 +38,7 @@ animation: leftEnter 1s;
 }
 @keyframes leftEnter {
   0% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(-100vw);
   }
   100% {
@@ -55,7 +55,7 @@ animation: leftEnter 1s;
     transform: translateX(0vw); 
   }
   100% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(100vw);
   } 
 }
