@@ -12,7 +12,11 @@
   src: url('./fonts/MoriGothic-Bold.ttf')  format('truetype');
   font-weight: 800;
 }
-
+@font-face {
+  font-family: "Ade";
+  src: url('./fonts/Ade-Display.otf')  format('opentype');
+  font-weight: 800;
+}
 $light-theme: (
   background: #fafafa,
   text: #232323

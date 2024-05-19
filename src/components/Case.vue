@@ -236,6 +236,7 @@ export default {
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="page2" class="page" id="page2">
+          <!-- <p>{{casetext}}</p> -->
           <video  autoplay loop muted>
             <source :src="content2" type="video/mp4">
           </video>
@@ -323,8 +324,6 @@ export default {
     font-style: italic;
     text-decoration: underline;
   }
-  
-  
   #page-container{
     box-sizing: border-box;
     overflow: hidden;
@@ -341,19 +340,18 @@ export default {
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    /* justify-content: flex-end; */
     height: 100%;
     width: 100%;
   }
   img, video{
-    /* height: 100%; */
-    width: 100%;
+    height: 100%;
+    /* width: 70%; */
     margin: 0;
   }
-
   #page-numbers{
     position: fixed;
-    top: 92vh;
+    top: 90vh;
     left: 50vw;
     width: 30%;
     display: flex;

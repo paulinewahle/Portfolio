@@ -47,24 +47,24 @@ export default{
     </div>
     <div class="flex-half">
       <ul>
-        <router-link to="/coriander" class="work-link" @mouseover=' revealCaseImg("/cases/coriander/Coriander.jpg");' @mouseleave="hideCaseImg();">
+        <li>01<router-link to="/coriander" class="work-link" @mouseover=' revealCaseImg("/cases/coriander/Coriander.jpg");' @mouseleave="hideCaseImg();">
         Coriander
-        </router-link>
-        <router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/cases/nordik/Nordik.jpg");' @mouseleave="hideCaseImg();">
+        </router-link></li>
+        <li>02<router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/cases/nordik/Nordik.jpg");' @mouseleave="hideCaseImg();">
         Nordik
-        </router-link>
-        <router-link to="/gamel" class="work-link" @mouseover=' revealCaseImg("/cases/gamel/Gamel.jpg");' @mouseleave="hideCaseImg();">
+        </router-link></li>
+        <li>03<router-link to="/gamel" class="work-link" @mouseover=' revealCaseImg("/cases/gamel/Gamel.jpg");' @mouseleave="hideCaseImg();">
         Gamél
-        </router-link>
-        <router-link to="/skilled" class="work-link" @mouseover=' revealCaseImg("/cases/skilled/Skilled.jpg");' @mouseleave="hideCaseImg();">
+        </router-link></li>
+        <li>04<router-link to="/skilled" class="work-link" @mouseover=' revealCaseImg("/cases/skilled/Skilled.jpg");' @mouseleave="hideCaseImg();">
         Skilled
-        </router-link>
-        <router-link to="/concreate" class="work-link" @mouseover=' revealCaseImg("/cases/concreate/Concreate.jpg");' @mouseleave="hideCaseImg();">
+        </router-link></li>
+        <li>05<router-link to="/concreate" class="work-link" @mouseover=' revealCaseImg("/cases/concreate/Concreate.jpg");' @mouseleave="hideCaseImg();">
         Concreate
-        </router-link>
-        <router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/cases/hitech/Hitech.jpg");' @mouseleave="hideCaseImg();">
+        </router-link></li>
+        <li>06<router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/cases/hitech/Hitech.jpg");' @mouseleave="hideCaseImg();">
         HiTech
-        </router-link>
+        </router-link></li>
       </ul>
       <!-- <ul>
           <li class="fade-item" v-for="route in workRoutes" :key="route.name" >
@@ -111,6 +111,9 @@ ul{
   flex-direction: column;
   justify-content: space-between;
 }
+li{
+  list-style: none;
+}
 a{
   opacity: 0;
   list-style: none;
@@ -120,28 +123,33 @@ a{
   animation: fadeIn 1s forwards;
   animation-delay: var(--fade-delay);
 }
+a:hover{
+  font-family: 'Ade', serif;
+  font-size: 3.7em;
+  font-style: normal;
+}
   
   
 
 
-a:nth-child(1) {
+li:nth-child(1) {
   --fade-delay: 0s;
 }
 
-a:nth-child(2) {
+li:nth-child(2) {
   --fade-delay: 0.1s;
 }
-a:nth-child(3) {
+li:nth-child(3) {
   --fade-delay: 0.2s;
 }
 
-a:nth-child(4) {
+li:nth-child(4) {
   --fade-delay: 0.3s;
 }
-a:nth-child(5) {
+li:nth-child(5) {
   --fade-delay: 0.4s;
 }
-a:nth-child(6) {
+li:nth-child(6) {
   --fade-delay: 0.5s;
 }
 

@@ -19,7 +19,7 @@
 </script>
 <template>
     <header>
-        <RouterLink to="/home">Pauline Wahle</RouterLink>
+        <RouterLink to="/home">PAULINE WAHLE</RouterLink>
         <nav>
             <RouterLink to="/home#work" :class="{ 'active-site': currentSite === 'home' }" 
             @click="currentSite = 'home'" id="home">Work</RouterLink>
@@ -45,10 +45,6 @@
         height: 10vh;
         z-index: 1000;
         position: fixed;
-    }
-    h1{
-        font-size: 1em;
-        font-weight: regular;
     }
     nav{
         height: initial;
