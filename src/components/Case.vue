@@ -9,11 +9,16 @@ export default {
         pagetitle5: String,
         pagetitle6: String,
         pagetitle7: String,
+
         casename: String,
         casetext: String,
         casetype: String,
         caselink: String,
         caselinktext: String,
+        caseroles: String,
+        casestakeholders: String,
+        casetools: String,
+        
         content1: String,
         content2: String,
         content3: String,
@@ -60,6 +65,7 @@ export default {
 
     const hideArrowCursor = () => {
       document.querySelector(".cursor").style.scale = "1";
+      document.querySelector(".arrow-cursor").style.opacity = "0";
     }
     const pageArrowCursor = () => {
       document.querySelector(".arrow-cursor").style.opacity = "1";
@@ -240,7 +246,7 @@ export default {
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="page2" class="page" id="page2">
-          <p id="descr">{{casetext}}</p>
+          <div id="descr"> <h3>{{casetype}}</h3> <p>{{casetext}}</p> <a :href="caselink" download> {{caselinktext}}</a></div>
           <video v-if="content2 && content2.includes('.mp4')" autoplay loop muted>
             <source :src="content2" type="video/mp4">
           </video>
@@ -258,7 +264,11 @@ export default {
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="page4" class="page" id="page4">
-          <p id="descr">{{casetext}}</p>
+          <div id="descr"> 
+            <h3>Roles</h3> <span>{{caseroles}}</span>
+            <h3>Stakeholders</h3> <span>{{casestakeholders}}</span>
+            <h3>Tools</h3> <span>{{casetools}}</span>
+          </div>
           <video  v-if="content4 && content4.includes('.mp4')" autoplay loop muted>
             <source :src="content4" type="video/mp4">
           </video>
@@ -267,6 +277,7 @@ export default {
         </Transition>
         <Transition :name="currentTransition">
         <div v-if="page5" class="page" id="page5">
+         
           <video  v-if="content5 && content5.includes('.mp4')" autoplay loop muted>
             <source :src="content5" type="video/mp4">
           </video>
@@ -342,10 +353,20 @@ img, video{
 }
 #descr{
   height: 100%;
-  min-width: 20vw;
-  display: block;
+  min-width: 15vw;
   margin: 0 5vw;
-  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+#descr span{
+  word-spacing: 100vw;
+}
+#descr h3{
+  font-family: 'Ade', serif;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-bottom: 0;
 }
 .back{
   display: block;
@@ -384,7 +405,7 @@ img, video{
     white-space: nowrap;
     animation: expand 1s;
     font-weight: 100;
-    
+    font-family: "Ade", serif;
   }
   .number-line{
     height: 1px;

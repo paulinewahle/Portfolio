@@ -17,6 +17,7 @@
   src: url("./fonts/Ade-Display.otf") format("opentype");
   font-weight: 100;
   font-style: normal;
+  text-transform: uppercase;
 }
 [data-theme=light] {
   --background-color: #fafafa;

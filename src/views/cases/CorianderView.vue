@@ -14,11 +14,16 @@ data() {
     pagetitle5: 'Design Systems',
     pagetitle6: 'Product',
     pagetitle7: 'Product',
+
     casename: 'Coriander',
     casetype: 'App Design',
     casetext: 'Coriander is there to discover and share recipes. The interface and information architecture of the app are designed to accommodate for the wide range of user generated content. ',
     caselink: '',
     caselinktext: '',
+    caseroles: 'UX Designer',
+    casestakeholders: 'Text',
+    casetools: 'Figma Instagram',
+
     content1: '/cases/coriander/Coriander_1.png',
     content2: '/cases/coriander/Coriander_2.png',
     content3: '/cases/coriander/Coriander_3.png',
@@ -40,11 +45,16 @@ data() {
   :pagetitle5="pagetitle5" 
   :pagetitle6="pagetitle6" 
   :pagetitle7="pagetitle7" 
+
   :casename="casename" 
   :casetype="casetype" 
   :casetext="casetext" 
   :caselink="caselink" 
   :caselinktext="caselinktext"
+  :caseroles="caseroles"
+  :casestakeholders="casestakeholders"
+  :casetools="casetools"
+
   :content1="content1"
   :content2="content2"
   :content3="content3"
