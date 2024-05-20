@@ -57,8 +57,11 @@
     nav a{
         padding-right: 2em;
     }
+    a:hover{
+        font-style: normal;
+    }
     .active-site{
-        font-style: italic;
+        font-family: 'Ade', serif;
     }
 
 }
