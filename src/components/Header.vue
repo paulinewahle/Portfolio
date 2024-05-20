@@ -43,7 +43,7 @@
         box-sizing: border-box;
         padding: 3vh 5vw;
         height: 10vh;
-        z-index: 1000;
+        z-index: 400;
         position: fixed;
     }
     nav{

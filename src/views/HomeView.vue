@@ -14,7 +14,8 @@ export default{
   },
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
-    document.querySelector(".text-cursor").style.display = "block";
+    // document.querySelector(".text-cursor").style.display = "block";
+    document.querySelector(".cursor").style.display = "block";
 
     setTimeout(() => {
       this.isLoading = false;
@@ -38,11 +39,9 @@ export default{
       frame.style.borderWidth = newBorderHeight + 'vh ' + newBorderWidth + 'vw';
 
       if (document.documentElement.scrollTop > documentHeight / 1.2) {
-        document.querySelector(".text-cursor").style.display = "none";
         document.querySelector(".work-view").style.display = "flex";
       }
       else if (document.documentElement.scrollTop < documentHeight / 1.2){
-        document.querySelector(".text-cursor").style.display = "block";
         document.querySelector(".work-view").style.display = "none";
       }
       else{

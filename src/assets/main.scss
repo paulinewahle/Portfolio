@@ -74,7 +74,7 @@ $dark-theme: (
 }
 *{
     box-sizing: border-box;
-    // scroll-behavior: auto;
+    cursor: none;
 }
 body {
   background-color: var(--background-color);

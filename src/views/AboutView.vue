@@ -1,7 +1,10 @@
 <script lang>
 export default{
-  
-
+  mounted() {
+    document.querySelector(".arrow-cursor").style.display = "none";
+    document.querySelector(".text-cursor").style.display = "none";
+    document.querySelector(".cursor").style.display = "block";
+  }
 }
 </script>
 
@@ -38,7 +41,7 @@ export default{
     </div>
   </div>
   <div id="right-wrapper">
-    <div id="profile-pic"></div>
+    <!-- <div id="profile-pic"></div> -->
     <p>Hi, I’m Pauline Wahle - user experience designer and frontend developer.
       I conceptualise and realise user friendly designs. With five years of experience and two degrees, I draw from a holistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.
     </p>
