@@ -89,7 +89,7 @@ export default{
   z-index: 20;
 }
 .flex-half{
-  width: 50%;
+  width: 48%;
   height: 100%;
   align-content: end;
 }
@@ -113,20 +113,26 @@ ul{
 }
 li{
   list-style: none;
+  padding: 0;
+  display: flex;
+  align-items: baseline;
 }
-a{
+.work-link{
   opacity: 0;
-  list-style: none;
   text-transform: uppercase;
   font-size: 4em;
-  line-height: 100%;
   animation: fadeIn 1s forwards;
   animation-delay: var(--fade-delay);
+  height: 5rem;
+  display: flex;
+  align-items: last baseline;
+  padding: 0;
+  margin-left: 2%;
 }
-a:hover{
+.work-link:hover{
   font-family: 'Ade', serif;
-  font-size: 3.7em;
   font-style: normal;
+  font-size: 3.7em;
 }
   
   

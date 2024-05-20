@@ -15,7 +15,8 @@
 @font-face {
   font-family: "Ade";
   src: url('./fonts/Ade-Display.otf')  format('opentype');
-  font-weight: 800;
+  font-weight: 100;
+  font-style: normal;
 }
 $light-theme: (
   background: #fafafa,

@@ -60,10 +60,6 @@
     .active-site{
         font-style: italic;
     }
-    #home:hover{
-        font-family: 'Ade', serif;
-        font-size: .9em;
-        font-style: normal;
-    }
+
 }
 </style>
