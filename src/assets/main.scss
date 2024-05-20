@@ -51,6 +51,22 @@ $dark-theme: (
   .responsive{
     display: none;
   }
+  *::selection{
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+  *::-moz-selection{
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+  *::-o-selection{
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
+  *::-ms-selection{
+    background-color: var(--text-color);
+    color: var(--background-color);
+  }
 }
 @keyframes fadeIn {
   0% { opacity: 0; }

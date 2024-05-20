@@ -8,13 +8,14 @@ export default{
 <template>
   <div id="about-view">
   <div id="left-wrapper">
-    <div id="profile-pic"></div>
     
-    <div id="email">
+    <h1>UX DESIGN</h1>
+    
+    <div id="links">
+      <div id="email">
       <a href="emailto:pauline.wahle@web.de" target="_blank">pauline.wahle@web.de</a>
       <h2>Get In Touch</h2>
     </div>
-    <div id="links">
         <div class="link-container">
           <h2> Design </h2>
             <a href="https://www.behance.net/paulinewahle1" target="_blank" class="about-link">Behance</a>
@@ -37,6 +38,7 @@ export default{
     </div>
   </div>
   <div id="right-wrapper">
+    <div id="profile-pic"></div>
     <p>Hi, I’m Pauline Wahle - user experience designer and frontend developer.
       I conceptualise and realise user friendly designs. With five years of experience and two degrees, I draw from a holistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.
     </p>
@@ -51,36 +53,44 @@ export default{
       flex-direction: row;
     }
     #left-wrapper, #right-wrapper{
-      border: 1px solid;
       width: 50vw;
       height: 100vh;
       padding: 15vh 5vw;
       display: flex;
       flex-direction: column;
+      
+    }
+    #left-wrapper{
       justify-content: space-between;
     }
-  
     #right-wrapper{
-      padding-left:  0;
-    }
-    .link-container{
-      /* width: 70%; */
-      display: flex;
-      align-items: baseline;
+      padding-left: 0;
+      justify-content: flex-end;
     }
     #right-wrapper p{
-      font-size: 1.8em;
-      line-height: 100%;
-      width: 80%;
+      column-count: 2;
+      column-width: 90%;
+      column-gap: 7%;
+      margin: 0;
+    }
+    .link-container{
+      display: flex;
+      align-items: baseline;
     }
     #profile-pic{
       background-image: url(../assets/img/profile.jpg);
       background-size: cover;
       background-position: center top;
-      height: 20rem;
-      width: 15rem;
+      height: 7rem;
+    	width: 5rem;
+      margin: 1%;
     }
-    h2, a{
+    h1{
+      font-family: 'Ade', serif;
+      font-size: 5rem;
+      font-weight: 100;
+    }
+    h2, a, p{
       font-size: .8rem;
       height: initial;
     }
@@ -93,13 +103,14 @@ export default{
     a{
       margin-right: 1em;
     }
-    p{
-      margin: 0;
+    #email{
+      margin-bottom: 10%;
     }
     #email a{
       font-size: 1.5em;
       font-family: 'Mori Bold', sans-serif;
       margin: 0;
     }
+
   }
 </style>
