@@ -23,14 +23,15 @@ data() {
     caseroles: 'UX Designer',
     casestakeholders: 'Text',
     casetools: 'Figma Instagram',
+    casemore: '',
 
-    content1: '/cases/coriander/Coriander_1.png',
-    content2: '/cases/coriander/Coriander_2.png',
-    content3: '/cases/coriander/Coriander_3.png',
-    content4: '/cases/coriander/Coriander_4.png',
-    content5: '/cases/coriander/Coriander_5.png',
-    content6: '/cases/coriander/Coriander_6.png',
-    content7: '/cases/coriander/Coriander_7.png',
+    content1: '/cases/coriander/Coriander_1d.jpg',
+    content2: '/cases/coriander/Coriander_2d.jpg',
+    content3: '/cases/coriander/Coriander_3d.jpg',
+    content4: '/cases/coriander/Coriander_4d.jpg',
+    content5: '/cases/coriander/Coriander_5d.jpg',
+    content6: '/cases/coriander/Coriander_6d.jpg',
+    content7: '/cases/coriander/Coriander_7d.jpg',
   }
 }
 }
@@ -54,6 +55,7 @@ data() {
   :caseroles="caseroles"
   :casestakeholders="casestakeholders"
   :casetools="casetools"
+  :casemore="casemore"
 
   :content1="content1"
   :content2="content2"

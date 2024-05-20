@@ -1,4 +1,6 @@
 <script lang>
+import { RouterLink } from 'vue-router';
+
 
 export default {
     props: {
@@ -18,6 +20,7 @@ export default {
         caseroles: String,
         casestakeholders: String,
         casetools: String,
+        casemore: String,
         
         content1: String,
         content2: String,
@@ -233,6 +236,8 @@ export default {
           <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button>  <div v-if="page6" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle6}} </p> </div>
           <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;" id="page-number-7">7</button>  <div v-if="page7" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle7}} </p> </div>
       </div>
+
+      <RouterLink to="/home#work" id="back">BACK</RouterLink>
       
 
       <div id="page-container">
@@ -247,10 +252,10 @@ export default {
         <Transition :name="this.currentTransition">
         <div v-if="page2" class="page" id="page2">
           <div id="descr"> <h3>{{casetype}}</h3> <p>{{casetext}}</p> <a :href="caselink" download> {{caselinktext}}</a></div>
-          <video v-if="content2 && content2.includes('.mp4')" autoplay loop muted>
+          <video v-if="content2 && content2.includes('.mp4')" autoplay loop muted class="small">
             <source :src="content2" type="video/mp4">
           </video>
-          <img v-if="content2 && (content2.includes('.jpg') || content2.includes('.png'))" :src="content2" alt="">
+          <img v-if="content2 && (content2.includes('.jpg') || content2.includes('.png'))" :src="content2" alt="" class="small">
         </div>
         </Transition>
         <Transition  :name="this.currentTransition">
@@ -269,16 +274,16 @@ export default {
             <h3>Stakeholders</h3> <span>{{casestakeholders}}</span>
             <h3>Tools</h3> <span>{{casetools}}</span>
           </div>
-          <video  v-if="content4 && content4.includes('.mp4')" autoplay loop muted>
+          <video  v-if="content4 && content4.includes('.mp4')" autoplay loop muted class="small">
             <source :src="content4" type="video/mp4">
           </video>
-          <img v-if="content4 && (content4.includes('.jpg') || content4.includes('.png'))" :src="content4" alt="">
+          <img v-if="content4 && (content4.includes('.jpg') || content4.includes('.png'))" :src="content4" alt="" class="small">
         </div>
         </Transition>
         <Transition :name="currentTransition">
         <div v-if="page5" class="page" id="page5">
          
-          <video  v-if="content5 && content5.includes('.mp4')" autoplay loop muted>
+          <video  v-if="content5 && content5.includes('.mp4')" autoplay loop muted >
             <source :src="content5" type="video/mp4">
           </video>
           <img v-if="content5 && (content5.includes('.jpg') || content5.includes('.png'))" :src="content5" alt="">
@@ -286,10 +291,11 @@ export default {
         </Transition>
         <Transition :name="this.currentTransition">
         <div v-if="page6" class="page" id="page6">
-          <video  v-if="content6 && content6.includes('.mp4')" autoplay loop muted>
+          <div id="descr"> <p>{{casemore}}</p> <a :href="caselink" download> {{caselinktext}}</a></div>
+          <video  v-if="content6 && content6.includes('.mp4')" autoplay loop muted class="small">
             <source :src="content6" type="video/mp4">
           </video>
-          <img v-if="content6 && (content6.includes('.jpg') || content6.includes('.png'))" :src="content6" alt="">
+          <img v-if="content6 && (content6.includes('.jpg') || content6.includes('.png'))" :src="content6" alt="" class="small">
         </div>
         </Transition>
         <Transition :name="this.currentTransition">
@@ -351,6 +357,10 @@ img, video{
   object-fit: contain;
   padding: 0 1%;
 }
+.small{
+  width: 75%;
+  height: 100%;
+}
 #descr{
   height: 100%;
   min-width: 15vw;
@@ -368,12 +378,6 @@ img, video{
   font-weight: 100;
   margin-bottom: 0;
 }
-.back{
-  display: block;
-  margin-top: 15vh;
-  text-decoration: none; 
-  font-size: 1em;
-}
 #page-numbers{
     position: fixed;
     top: 90vh;
@@ -383,6 +387,7 @@ img, video{
     justify-content: start;
     align-items: center;
     font-size: 1em;
+    height: 10vh;
   }
   button{
     border: none;
@@ -420,6 +425,14 @@ img, video{
     to{
       width: 40%;
     }
+  }
+  #back{
+    position: fixed;
+    top: 90vh;
+    left: 5vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
   }
 
 
