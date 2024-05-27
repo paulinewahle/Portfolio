@@ -352,9 +352,9 @@ export default {
   width: 100%;
 }
 img, video{
-  /* height: auto; */
+  height: 100%;
   width: 100%;
-  object-fit: contain;
+  object-fit: cover;
   padding: 0 1%;
 }
 .small{

@@ -108,6 +108,8 @@ export default{
 
     // Controls
     
+    // Controls
+    
     class CustomOrbitControls extends OrbitControls {
     constructor(camera, canvas) {
         super(camera, canvas);
@@ -118,32 +120,35 @@ export default{
         
     }
     }
-    class CustomMouseFollowControl {
-    constructor(camera, canvas) {
-        this.camera = camera;
-        this.canvas = canvas;
 
-        this.mouseX = 0;
-        this.mouseY = 0;
-
-        this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this), false);
-    }
-
-    onMouseMove(event) {
-        this.mouseX = (event.clientX / this.canvas.width) * 2 - 1;
-        this.mouseY = - (event.clientY / this.canvas.height) * 2 + 1;
-    }
-
-    update() {
-        this.camera.position.x += (this.mouseX - this.camera.position.x) * 0.05;
-        this.camera.position.y += (- this.mouseY - this.camera.position.y) * 0.05;
-
-        this.camera.lookAt(0, 0, 0);
-    }
-}
-
-    const controls = new CustomMouseFollowControl(camera, canvas)
+    const controls = new CustomOrbitControls(camera, canvas)
     controls.enableDamping = true
+    // class CustomMouseFollowControl {
+    // constructor(camera, canvas) {
+    //     this.camera = camera;
+    //     this.canvas = canvas;
+
+    //     this.mouseX = 0;
+    //     this.mouseY = 0;
+
+    //     this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this), false);
+    // }
+
+    // onMouseMove(event) {
+    //     this.mouseX = (event.clientX / this.canvas.width) * 2 - 1;
+    //     this.mouseY = - (event.clientY / this.canvas.height) * 2 + 1;
+    // }
+
+    // update() {
+    //     this.camera.position.x += (this.mouseX - this.camera.position.x) * 0.05;
+    //     this.camera.position.y += (- this.mouseY - this.camera.position.y) * 0.05;
+
+    //     this.camera.lookAt(0, 0, 0);
+    // }
+// }
+
+    // const controls = new OrbitControls(camera, canvas)
+    // controls.enableDamping = true
 
 
 

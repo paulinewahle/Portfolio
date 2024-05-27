@@ -1,43 +1,67 @@
 <script>
+    import ThemeToggle from '../components/ThemeToggle.vue';
 
 export default{
     props:{
         links: Array,
       },
     components: {
+        ThemeToggle
+    },
+     data() {
+        return {
+            };
     },
     mounted(){
+        this.$root.$on("target-hover", this.handleTargetHover);
 
         let mouseCursor = document.querySelector(".cursor");
         let textCursor = document.querySelector(".text-cursor");
         let arrowCursor = document.querySelector(".arrow-cursor");
-
+        const target = document.querySelector(".theme-toggle");
+        const stickDistance = 50; // Distance within which the cursor will stick
 
         window.addEventListener("mousemove", mouseFollow);
         function mouseFollow(e) {
-        mouseCursor.style.left = e.clientX + "px";
-        mouseCursor.style.top = e.clientY + "px";
-        arrowCursor.style.left = e.clientX + "px";
-        arrowCursor.style.top = e.clientY + "px";
-        textCursor.style.left = e.clientX + "px";
-        textCursor.style.top = e.clientY + "px";
-
-
-        
+            const cursorX = e.clientX;
+            const cursorY = e.clientY;
+            const targetRect = target.getBoundingClientRect();
+            const targetX = targetRect.left + targetRect.width / 2;
+            const targetY = targetRect.top + targetRect.height / 2;
+            const distanceX = cursorX - targetX;
+            const distanceY = cursorY - targetY;
+            const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+            // mouseCursor.style.left = e.clientX + "px";
+            // mouseCursor.style.top = e.clientY + "px";
+            arrowCursor.style.left = e.clientX + "px";
+            arrowCursor.style.top = e.clientY + "px";
+            // textCursor.style.left = e.clientX + "px";
+            // textCursor.style.top = e.clientY + "px";
 
 
         let rightScreen = window.screen.width/2
         let leftScreen = window.screen.width/2
-        if(e.pageX < rightScreen){
-            document.querySelector(".arrow-cursor").classList.add("left");
-            document.querySelector(".arrow-cursor").classList.remove("right");
-        }
-        else if(e.screenX > leftScreen){
-            document.querySelector(".arrow-cursor").classList.add("right");
-            document.querySelector(".arrow-cursor").classList.remove("left");
+            if(e.pageX < rightScreen){
+                document.querySelector(".arrow-cursor").classList.add("left");
+                document.querySelector(".arrow-cursor").classList.remove("right");
+            }
+            else if(e.screenX > leftScreen){
+                document.querySelector(".arrow-cursor").classList.add("right");
+                document.querySelector(".arrow-cursor").classList.remove("left");
+            }
+             if (distance < stickDistance) {
+            console.log("hover")
+            mouseCursor.style.left = `${targetX}px`;
+            mouseCursor.style.top = `${targetY}px`;
+            }else {
+            // Follow the cursor normally
+            mouseCursor.style.left = `${cursorX}px`;
+            mouseCursor.style.top = `${cursorY}px`;
         }
 
         }
+
+
 
     },
   
@@ -47,10 +71,8 @@ export default{
 
 <template>
     <div class="arrow-cursor desktop"></div>
-    <div class="text-cursor desktop"><p>scroll</p></div>
-    <div class="cursor desktop">
-    </div>
-  
+    <!-- <div class="text-cursor desktop"><p>scroll</p></div> -->
+    <div class="cursor desktop"> </div>
 </template>
 
 
@@ -60,17 +82,27 @@ export default{
 }
 
 @media (min-width: 992px) {
+    #target {
+        width: 30px;
+        height: 30px;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+        top: 0;
+}
     .cursor {
         left: 0;
         top: 0;
         width: 30px;
         height: 30px;
-        margin-top: -15px;
-        margin-left: -15px;
+        transform: translate(-50%, -50%);
         pointer-events: none;
         background-color: white;
         border-radius: 50%;
-        filter: blur(7px) grayscale(1);  
+        filter: grayscale(1);  
         transition: scale 0.3s ease-in-out;
         position: fixed;
         z-index: 500;

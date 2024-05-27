@@ -14,16 +14,21 @@ export default {
       ThemeToggle,
       Header,
       Cursor
-      
-    }
+    },
+    data(){
+        return{
+          links: [],
+          className: ''
+        }
+    },
 };
 </script>
 
 <template>
   
   <Header />
-    <RouterView/>
-  <Cursor />
+    <RouterView :links="links"/>
+    <Cursor :links="links" />
   
 </template>
 

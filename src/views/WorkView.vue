@@ -5,7 +5,7 @@ import Sphere from '../components/Sphere.vue';
 
 export default{
   props:{
-      // links: Array,
+      links: Array,
   },
   components: {
       Footer,
@@ -21,6 +21,13 @@ export default{
       workRoutes
     };
   },
+  mounted() {
+    document.querySelector(".arrow-cursor").style.display = "none";
+    const hoverLinks = document.querySelectorAll('.work-link');
+    // this.links.push("hi");
+    
+    console.log(this.links);
+  },
   methods:{
     revealCaseImg: (image) => {
       document.querySelector("#case-img").style.backgroundImage = 'url("' + image + '")';
@@ -32,11 +39,7 @@ export default{
       document.querySelector("#case-img").style.filter = "blur(10px)";
     },
   },
-  mounted() {
-    document.querySelector(".arrow-cursor").style.display = "none";
-    // this.links.push(document.querySelector('.fade-item'))
-
-  }
+  
 }
 </script>
 
