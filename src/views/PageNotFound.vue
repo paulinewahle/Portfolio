@@ -1,16 +1,22 @@
 <script lang>
+import Footer from '../components/Footer.vue'
+
 export default{
+    components: {
+    Footer
+    },
     mounted() {
-        document.querySelector(".arrow-cursor").style.opacity = "0";
-        document.querySelector(".text-cursor").style.opacity = "0";
+        document.querySelector(".arrow-cursor").style.display = "none";
     }
 }  
 </script>
 <template>
     
     <main>
-        <h1>404</h1>
-        <h2>Page Not Found</h2>
+        <div>
+            <h1>404</h1>
+            <h2>PAGE NOT FOUND</h2>
+        </div>
         <router-link to="/home" class="case-card">
             Back To Homepage
         </router-link>
@@ -28,14 +34,15 @@ export default{
         justify-content: center;
         align-items: center;
         overflow-y: hidden;
+        text-align: center;
     }
     a{
         margin-top: 10%;
-    
-        font-size: 1.5rem
     }
     h1{
         font-size: 7rem;
+        margin: 0;
+        line-height: 100%;
     }
     h2{
         font-size: 1.5rem;
@@ -43,18 +50,12 @@ export default{
 }
 
 @media (min-width: 992px) {
-    a{
-        margin-top: 5%;
-        text-decoration: underline;
-        font-style: italic;
-        font-size: 1.5rem;
-    }
     h1{
-        font-size: 18rem;
+        font-size: 15rem;
     }
-    h2{
-        font-size: 6rem;
-    }
+    main{
+        height: 100vh;
+    } 
 }
 
 </style>

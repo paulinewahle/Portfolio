@@ -132,7 +132,7 @@ li{
 .work-link{
   opacity: 0;
   text-transform: uppercase;
-  font-size: 4em;
+  font-size: 5rem;
   animation: fadeIn 1s forwards;
   animation-delay: var(--fade-delay);
   height: 5rem;
