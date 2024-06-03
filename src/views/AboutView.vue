@@ -2,7 +2,6 @@
 export default{
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
-    document.querySelector(".text-cursor").style.display = "none";
     document.querySelector(".cursor").style.display = "block";
   }
 }
@@ -89,7 +88,6 @@ export default{
       margin: 1%;
     }
     h1{
-      font-family: 'Ade', serif;
       font-size: 5rem;
       font-weight: 100;
     }

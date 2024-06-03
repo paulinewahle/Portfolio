@@ -2,7 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import ThemeToggle from './components/ThemeToggle.vue';
 import Header from './components/Header.vue';
-import Cursor from '@/components/Cursor.vue'
+import Cursor from '@/components/Cursor.vue';
 
 
 import './assets/main.scss'; 
@@ -13,26 +13,28 @@ export default {
     components: {
       ThemeToggle,
       Header,
-      Cursor
+      Cursor,
     },
     data(){
         return{
-          links: [],
-          className: ''
+            links: [],
         }
     },
+    mounted() {
+      document.querySelector(".arrow-cursor").style.display = "none";
+    }
 };
 </script>
 
 <template>
   
-  <Header />
+    <Header :links="links"/>
+
     <RouterView :links="links"/>
-    <Cursor :links="links" />
-  
+
+    <Cursor :links="links"/>
+    
 </template>
 
 <style scoped>
-
-
 </style>

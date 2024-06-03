@@ -2,68 +2,94 @@
     import ThemeToggle from '../components/ThemeToggle.vue';
 
 export default{
+    name: 'Cursor',
     props:{
         links: Array,
       },
     components: {
         ThemeToggle
     },
-     data() {
+    data() {
         return {
-            };
+            target: null,
+            allLinks: null
+        };
     },
+
     mounted(){
-        this.$root.$on("target-hover", this.handleTargetHover);
+        //setTimeout(console.log('CursorLinks1:', this.links), 1000);
+        setTimeout(() => {
+            console.log('CursorLinks2:', this.links);
+            this.links.forEach((link) => {
+                link.addEventListener("mouseover", () => {
+                    console.log("hoverliunk");
+                    mouseCursor.style.scale = 3;
+                });
+                link.addEventListener("mouseleave", () => {
+                    mouseCursor.style.scale = 1;
+                });
+            });
+        }, 1);
+        
 
         let mouseCursor = document.querySelector(".cursor");
         let textCursor = document.querySelector(".text-cursor");
         let arrowCursor = document.querySelector(".arrow-cursor");
         const target = document.querySelector(".theme-toggle");
-        const stickDistance = 50; // Distance within which the cursor will stick
+        const stickDistance = 40; 
 
         window.addEventListener("mousemove", mouseFollow);
+        
         function mouseFollow(e) {
-            const cursorX = e.clientX;
-            const cursorY = e.clientY;
-            const targetRect = target.getBoundingClientRect();
-            const targetX = targetRect.left + targetRect.width / 2;
-            const targetY = targetRect.top + targetRect.height / 2;
-            const distanceX = cursorX - targetX;
-            const distanceY = cursorY - targetY;
-            const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-            // mouseCursor.style.left = e.clientX + "px";
-            // mouseCursor.style.top = e.clientY + "px";
-            arrowCursor.style.left = e.clientX + "px";
-            arrowCursor.style.top = e.clientY + "px";
-            // textCursor.style.left = e.clientX + "px";
-            // textCursor.style.top = e.clientY + "px";
+            
+        const cursorX = e.clientX;
+        const cursorY = e.clientY;
+        const targetRect = target.getBoundingClientRect();
+        const targetX = targetRect.left + targetRect.width / 2;
+        const targetY = targetRect.top + targetRect.height / 2;
+        const distanceX = cursorX - targetX;
+        const distanceY = cursorY - targetY;
+        const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
+        // mouseCursor.style.left = e.clientX + "px";
+        // mouseCursor.style.top = e.clientY + "px";
+        arrowCursor.style.left = e.clientX + "px";
+        arrowCursor.style.top = e.clientY + "px";
+        // textCursor.style.left = e.clientX + "px";
+        // textCursor.style.top = e.clientY + "px";
 
 
         let rightScreen = window.screen.width/2
         let leftScreen = window.screen.width/2
-            if(e.pageX < rightScreen){
-                document.querySelector(".arrow-cursor").classList.add("left");
-                document.querySelector(".arrow-cursor").classList.remove("right");
-            }
-            else if(e.screenX > leftScreen){
-                document.querySelector(".arrow-cursor").classList.add("right");
-                document.querySelector(".arrow-cursor").classList.remove("left");
-            }
-             if (distance < stickDistance) {
-            console.log("hover")
-            mouseCursor.style.left = `${targetX}px`;
-            mouseCursor.style.top = `${targetY}px`;
-            }else {
-            // Follow the cursor normally
-            mouseCursor.style.left = `${cursorX}px`;
-            mouseCursor.style.top = `${cursorY}px`;
+
+        // Arrow cursor
+        if(e.pageX < rightScreen){
+            document.querySelector(".arrow-cursor").classList.add("left");
+            document.querySelector(".arrow-cursor").classList.remove("right");
+        }
+        else if(e.screenX > leftScreen){
+            document.querySelector(".arrow-cursor").classList.add("right");
+            document.querySelector(".arrow-cursor").classList.remove("left");
         }
 
+        if (distance < stickDistance) {
+        mouseCursor.style.left = `${targetX}px`;
+        mouseCursor.style.top = `${targetY}px`;
+        window.addEventListener("click", ThemeToggle.toggleTheme);
+        }else {
+        // Follow the cursor normally
+        mouseCursor.style.left = `${cursorX}px`;
+        mouseCursor.style.top = `${cursorY}px`;
         }
-
+        }
+        
+ 
+        
 
 
     },
+    methods:{
+        
+    }
   
 }
 </script>
@@ -107,6 +133,7 @@ export default{
         position: fixed;
         z-index: 500;
         mix-blend-mode: difference;
+        transform-origin: top left;
     }
 
     .arrow-cursor{

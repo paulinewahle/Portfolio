@@ -4,8 +4,12 @@ import Footer from '../components/Footer.vue';
 import Sphere from '../components/Sphere.vue';
 
 export default{
-  props:{
-      links: Array,
+  props: {
+    links: {
+      type: Array,
+      required: true,
+      default: () => [],
+    },
   },
   components: {
       Footer,
@@ -23,10 +27,15 @@ export default{
   },
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
-    const hoverLinks = document.querySelectorAll('.work-link');
-    // this.links.push("hi");
-    
-    console.log(this.links);
+   
+    if (this.links.length < 4) {
+      let nodeList = document.querySelectorAll('.work-link');
+      nodeList.forEach(element => {
+          this.links.push(element);
+      });
+    }
+    console.log('WorkLinks:', this.links);
+
   },
   methods:{
     revealCaseImg: (image) => {
@@ -133,13 +142,8 @@ li{
   margin-left: 2%;
 }
 .work-link:hover{
-  font-family: 'Ade', serif;
   font-style: normal;
-  font-size: 3.7em;
 }
-  
-  
-
 
 li:nth-child(1) {
   --fade-delay: 0s;

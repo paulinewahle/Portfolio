@@ -24,6 +24,10 @@ const router = createRouter({
       }
     }
   },
+  // beforeEach(to, from, next) {
+  //   to.meta.links = links; // Ensure links is passed in meta
+  //   next();
+  // },
   routes: [
     {
       path: '/:pathMatch(.*)*',
@@ -38,12 +42,14 @@ const router = createRouter({
     {
       path: '/home',
       name: 'home',
-      component: HomeView
+      component: HomeView,
+      props: route => ({ links: route.meta.links })
     },
     {
       path: '/home#work',
       name: 'work',
-      component: WorkView
+      component: WorkView,
+      props: route => ({ links: route.meta.links })
     },
     {
       path: '/about',

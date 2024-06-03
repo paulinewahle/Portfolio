@@ -5,7 +5,7 @@ import Footer from '../components/Footer.vue'
 
 export default{
   props:{
-    sideNav: Array
+    links: Array
   },
   components: {
     Sphere,
@@ -60,7 +60,7 @@ export default{
     <div id="frame"></div>
     <Sphere />
     <div id="work">
-    <WorkView />
+    <WorkView :links="links"/>
     </div>
     <Footer />
 

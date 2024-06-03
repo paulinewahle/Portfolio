@@ -1,17 +1,27 @@
 <script lang>
-    import ThemeToggle from '../components/ThemeToggle.vue';
-    import '../assets/main.scss'; 
+import ThemeToggle from '../components/ThemeToggle.vue';
+import '../assets/main.scss'; 
 
-    export default {
+export default {
     name: 'App',
     components: {
-      ThemeToggle
+        ThemeToggle
+    },
+    props:{
+    links: Array,
     },
     data() {
     return {
-      currentSite: 'home'
+        currentSite: 'home'
     };
     },
+    mounted() {
+    document.querySelector(".arrow-cursor").style.display = "none";
+    
+    this.links.push(document.querySelector('#about'));
+    this.links.push(document.querySelector('#work'));
+    this.links.push(document.querySelector('#home'));
+  },
         
     
 };
@@ -22,7 +32,7 @@
         <RouterLink id="home" to="/home">PAULINE WAHLE</RouterLink>
         <nav>
             <RouterLink to="/home#work" :class="{ 'active-site': currentSite === 'home' }" 
-            @click="currentSite = 'home'" id="home">Work</RouterLink>
+            @click="currentSite = 'home'" id="work">Work</RouterLink>
             <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
         </nav>
         <ThemeToggle/>
@@ -61,7 +71,7 @@
         font-style: normal;
     }
     .active-site{
-        font-family: 'Ade', serif;
+        font-family: "Mori Bold";
     }
 
 }
