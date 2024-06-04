@@ -58,12 +58,9 @@ export default {
     
   // },
   mounted(){
-    document.querySelector(".text-cursor").style.display = "none";
-
     document.querySelector("#page-container").style.display = "block";
     document.querySelector("#page-container").style.opacity = "1";
     document.querySelector(".arrow-cursor").style.display = "block";
-    document.querySelector(".text-cursor").style.display = "none";
     
 
     const hideArrowCursor = () => {
@@ -326,9 +323,7 @@ export default {
   h1{
     margin-top: 20vh;
   }
-  h4{
-    font-family: 'Serif', serif;
-  }
+
 }
 @media (min-width: 992px) {
 
@@ -373,7 +368,6 @@ img, video{
   word-spacing: 100vw;
 }
 #descr h3{
-  font-family: 'Ade', serif;
   text-transform: uppercase;
   font-weight: 100;
   margin-bottom: 0;
@@ -410,7 +404,6 @@ img, video{
     white-space: nowrap;
     animation: expand 1s;
     font-weight: 100;
-    font-family: "Ade", serif;
   }
   .number-line{
     height: 1px;
