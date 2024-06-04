@@ -69,7 +69,8 @@
 }
 * {
   box-sizing: border-box;
-  cursor: none;
+  cursor: auto;
+  scroll-behavior: auto;
 }
 
 body {
@@ -93,6 +94,11 @@ h1 {
 
 h2 {
   font-family: "Mori Bold", sans-serif;
+}
+
+h3 {
+  font-family: "Mori Bold", sans-serif;
+  text-transform: uppercase;
 }
 
 a {

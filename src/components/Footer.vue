@@ -1,5 +1,6 @@
 <script lang>
 export default{
+    
     mounted() {
     const percentLabel = document.querySelector("#percent");
       window.addEventListener("scroll", () => {
@@ -26,7 +27,7 @@ export default{
         
         <p class="desktop" id="scrollbutton">Scroll to continue . . .</p>
         <p id="scroll-percentage" class="desktop">
-        <span id="percent"></span>
+        <span id="percent">0%</span>
         
         </p>
     </footer>

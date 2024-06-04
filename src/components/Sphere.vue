@@ -119,10 +119,8 @@ export default{
     constructor(camera, canvas) {
         super(camera, canvas);
 
-        // Disable zoom (scroll) functionality
         this.enableZoom = false;
-
-        
+        this.enablePan = false;
     }
     }
 

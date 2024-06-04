@@ -17,11 +17,23 @@ export default {
     },
     mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
+    var documentHeight = document.documentElement.scrollHeight - window.innerHeight;
     
     this.links.push(document.querySelector('#about'));
     this.links.push(document.querySelector('#work'));
     this.links.push(document.querySelector('#home'));
-  },
+    },
+    methods:{
+        
+    scrollDown(){
+        setTimeout(() => {
+        document.documentElement.scrollTop = document.documentElement.scrollHeight - window.innerHeight / 1.2;
+        }, 1);
+    },
+    scrollUp(){
+        document.documentElement.scrollTop = 0;
+    }
+    }
         
     
 };
@@ -29,10 +41,10 @@ export default {
 </script>
 <template>
     <header>
-        <RouterLink id="home" to="/home">PAULINE WAHLE</RouterLink>
+        <RouterLink id="home" to="/home" @click="scrollUp();">PAULINE WAHLE</RouterLink>
         <nav>
-            <RouterLink to="/home#work" :class="{ 'active-site': currentSite === 'home' }" 
-            @click="currentSite = 'home'" id="work">Work</RouterLink>
+            <RouterLink to="/home" :class="{ 'active-site': currentSite === 'home' }" 
+            @click="scrollDown(); currentSite = 'home'" id="work">Work</RouterLink>
             <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
         </nav>
         <ThemeToggle/>

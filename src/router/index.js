@@ -20,7 +20,7 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        behavior: 'smooth',
+        // behavior: 'smooth',
       }
     }
   },
@@ -45,12 +45,12 @@ const router = createRouter({
       component: HomeView,
       props: route => ({ links: route.meta.links })
     },
-    {
-      path: '/home#work',
-      name: 'work',
-      component: WorkView,
-      props: route => ({ links: route.meta.links })
-    },
+    // { //UNUSED
+    //   path: '/home#work',
+    //   name: 'work',
+    //   component: WorkView,
+    //   props: route => ({ links: route.meta.links })
+    // },
     {
       path: '/about',
       name: 'about',

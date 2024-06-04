@@ -56,11 +56,10 @@ export default{
 
 <template>
 
-   
     <div id="frame"></div>
     <Sphere />
     <div id="work">
-    <WorkView :links="links"/>
+      <WorkView :links="links"/>
     </div>
     <Footer />
 
@@ -73,7 +72,7 @@ export default{
 }
 @media (min-width: 992px) {
 body{
-  height: 200vh !important;
+  height: 150vh !important;
 }
 #frame{
   position: fixed;
