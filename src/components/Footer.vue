@@ -41,10 +41,10 @@ export default{
         align-items: center;
         position: fixed;
         top: 90vh;
-        z-index: 1000;
+        z-index: 100;
     }
     nav{
-        width: 20vw;
+        width: 25vw;
         display: flex;
         justify-content: space-between;
         margin-left: 5vw;

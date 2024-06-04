@@ -16,12 +16,14 @@ export default{
 
    mounted(){
         //1,5,8
-    const hdrTextureURL = new URL('../assets/img/Untitled-1.hdr', import.meta.url);
+    const hdrTextureURL = new URL('../assets/img/swirl.hdr', import.meta.url);
     
     //Loading
     const textureLoader = new THREE.TextureLoader();
-    const normalMap = new URL('../assets/img/Lava.png', import.meta.url);
+    const normalMap = new URL('../assets/img/maps/Stylized_Lava_Rocks_001_normal.png', import.meta.url);
     const normalTexture = textureLoader.load(normalMap);
+    const heightMap = new URL('../assets/img/src/maps/Stylized_Lava_Rocks_001_height.png', import.meta.url);
+    const heightTexture = textureLoader.load(heightMap);
     
 
     // Canvas
@@ -36,21 +38,24 @@ export default{
 
     // Materials
     const material = new THREE.MeshPhysicalMaterial({
-        //emissive: 0x707070,
+        // emissive: 0x707070,
         wireframe: false,
         metalness: 1,
         roughness: 0,
-        // envMapIntensity: 1,
+        envMapIntensity: 1,
         clearcoat: .1,
         clearcoatRoughness: 0,
         transparent: true,
-        opacity: 0.5,
-        transmission: .001,
+        opacity: .4,
+        transmission: .1,
         reflectivity: 1,
         ior: 0.9,
-        side: THREE.DoubleSide
-        // normalMap: normalTexture
+        side: THREE.DoubleSide,
+        normalMap: normalTexture,
+        displacementMap: heightTexture,
+        displacementScale: 60
     })
+    
 
 
     // Mesh
