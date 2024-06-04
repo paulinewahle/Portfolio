@@ -225,13 +225,13 @@ export default {
   <div class="desktop">
     
       <div id="page-numbers">
-          <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>  <div v-if="page1" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle1}} </p> </div>
-          <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2 </button> <div v-if="page2" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle2}} </p> </div>
-          <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button>  <div v-if="page3" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle3}} </p></div>
-          <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button>  <div v-if="page4" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle4}} </p> </div>
-          <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;" id="page-number-5">5</button>  <div v-if="page5" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle5}} </p></div>
-          <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button>  <div v-if="page6" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle6}} </p> </div>
-          <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;" id="page-number-7">7</button>  <div v-if="page7" class="number-text"> <div class="number-line"> </div> <p>{{pagetitle7}} </p> </div>
+          <button @click="page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page1 = true;" id="page-number-1">1</button>  <div v-if="page1" class="number-text"> <div class="number-line"> </div> {{pagetitle1}}  </div>
+          <button @click="page1 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = false; page2 = true;" id="page-number-2">2 </button> <div v-if="page2" class="number-text"> <div class="number-line"> </div> {{pagetitle2}}  </div>
+          <button @click="page1 = false; page2 = false; page4 = false; page5 = false; page6 = false; page7 = false; page3 = true;" id="page-number-3">3</button>  <div v-if="page3" class="number-text"> <div class="number-line"> </div> {{pagetitle3}} </div>
+          <button @click="page1 = false; page2 = false; page3 = false; page5 = false; page6 = false; page7 = false; page4 = true;" id="page-number-4">4</button>  <div v-if="page4" class="number-text"> <div class="number-line"> </div> {{pagetitle4}}  </div>
+          <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page6 = false; page7 = false; page5 = true;" id="page-number-5">5</button>  <div v-if="page5" class="number-text"> <div class="number-line"> </div> {{pagetitle5}} </div>
+          <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page7 = false; page6 = true;" id="page-number-6">6</button>  <div v-if="page6" class="number-text"> <div class="number-line"> </div> {{pagetitle6}}  </div>
+          <button @click="page1 = false; page2 = false; page3 = false; page4 = false; page5 = false; page6 = false; page7 = true;" id="page-number-7">7</button>  <div v-if="page7" class="number-text"> <div class="number-line"> </div> {{pagetitle7}}  </div>
       </div>
 
       <RouterLink to="/home#work" id="back">BACK</RouterLink>
@@ -363,9 +363,11 @@ img, video{
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  
 }
 #descr span{
   word-spacing: 100vw;
+  
 }
 #descr h3{
   text-transform: uppercase;
@@ -380,16 +382,16 @@ img, video{
     display: flex;
     justify-content: start;
     align-items: center;
-    font-size: 1em;
     height: 10vh;
+    font-family: Arial, Helvetica, sans-serif;
   }
   button{
     border: none;
     margin: 1%;
-    width: 1vw;
     display: flex;
     align-items: center;
     transition: 1s all ease;
+    height: auto;
     font-size: 1.2em;
     background: none;
     color: var(--text-color);
@@ -398,12 +400,12 @@ img, video{
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-size: 1.2em;
     width: 40%;
     overflow: hidden;
     white-space: nowrap;
     animation: expand 1s;
     font-weight: 100;
+    font-size: 1.2em;
   }
   .number-line{
     height: 1px;

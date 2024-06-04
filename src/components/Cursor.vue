@@ -125,7 +125,7 @@ export default{
         height: 30px;
         transform: translate(-50%, -50%);
         pointer-events: none;
-        background-color: var(--text-color);
+        background-color: white;
         border-radius: 50%;
         filter: grayscale(1);  
         transition: scale 0.3s ease-in-out;
