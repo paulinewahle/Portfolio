@@ -108,16 +108,7 @@ export default{
 }
 
 @media (min-width: 992px) {
-    #target {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
+
     .cursor {
         left: 0;
         top: 0;

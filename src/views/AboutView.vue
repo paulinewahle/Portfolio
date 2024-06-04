@@ -3,11 +3,16 @@ export default{
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
     document.querySelector(".cursor").style.display = "block";
+
+    setTimeout(() => {
+      document.querySelector('#transitionScreen').style.opacity = "0";
+    }, 100);
   }
 }
 </script>
 
 <template>
+  <div id="transitionScreen"></div>
   <div id="about-view">
   <div id="left-wrapper">
     

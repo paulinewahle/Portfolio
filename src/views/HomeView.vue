@@ -14,12 +14,11 @@ export default{
   },
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
-    // document.querySelector(".text-cursor").style.display = "block";
     document.querySelector(".cursor").style.display = "block";
 
     setTimeout(() => {
-      this.isLoading = false;
-    }, 15000);
+      document.querySelector('#transitionScreen').style.opacity = "0";
+    }, 100);
 
 
     window.onscroll = function() {scrollTransition()};
@@ -55,7 +54,7 @@ export default{
 </script>
 
 <template>
-
+    <div id="transitionScreen"></div>
     <div id="frame"></div>
     <Sphere />
     <div id="work">
@@ -74,6 +73,7 @@ export default{
 body{
   height: 150vh !important;
 }
+
 #frame{
   position: fixed;
   height: 100vh;

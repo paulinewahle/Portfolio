@@ -16,7 +16,7 @@ export default{
 
    mounted(){
         //1,5,8
-    const hdrTextureURL = new URL('../assets/img/swirl.hdr', import.meta.url);
+    const hdrTextureURL = new URL('../assets/img/film.hdr', import.meta.url);
     
     //Loading
     const textureLoader = new THREE.TextureLoader();
@@ -186,7 +186,6 @@ export default{
 
     const tick = () =>
     {
-
         const elapsedTime = clock.getElapsedTime()
 
         // Update objects
