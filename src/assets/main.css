@@ -77,6 +77,9 @@ body {
   .desktop {
     display: none;
   }
+  body {
+    margin-top: 10vh;
+  }
   h1 {
     font-weight: 100;
   }

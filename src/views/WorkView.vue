@@ -86,12 +86,70 @@ export default{
     </div>
     
     </div>
+
+
+  <div class="responsive" id="work-wrapper">
+    <p id="intro"> Nordik is a webshop concept in minimalistic grid design. With a compact top-down deep information structure the design is user intuitive according to the sites hierarchical task analysis.</p>
+
+    <router-link to="/nordik" class="case-card">
+      <img src="/cases/nordik/Nordik.jpg" alt="">
+      <h2> <div class="circle"></div> Nordik </h2>
+      <p>Nordik is a webshop concept in minimalistic grid design. With a compact top-down deep information structure the design is user intuitive according to the sites hierarchical task analysis.</p>
+    </router-link>
+    <router-link to="/gamel" class="case-card">
+      <img src="/cases/gamel/Gamel.jpg" alt="">
+      <h2> <div class="circle"></div>  Gamél </h2>
+      <p>The web presence of the danish production agency Gamél centralises its photo- and videographic content in the modern minimalist grid style design in muted tones and with attention to detail elements in the animation of user interaction points such as buttons, cursor, sliders and overlays. </p>
+    </router-link>
+    <router-link to="/skilled" class="case-card">
+      <img src="/cases/skilled/Skilled.jpg" alt="">
+      <h2> <div class="circle"></div> Skilled </h2>
+      <p>Skilled is the concept of an educational platform app with all aspects reduced to the optimal usability. The user experience is build on a brand identity in flat primary blue duotone design with an icon category system in vector line style.</p>
+    </router-link>
+    <router-link to="/concreate" class="case-card">
+      <img src="/cases/concreate/Concreate.jpg" alt="">
+      <h2> <div class="circle"></div> Concreate </h2>
+      <p>The CONCREATE zine is an exploration of brutalist style across graphic design, architecture, art, typography and web design. The project was completed by five students from Jönköping University in 2021.</p>
+    </router-link>
+    <router-link to="/coriander" class="case-card">
+      <img src="/cases/coriander/Coriander.jpg" alt="">
+      <h2> <div class="circle"></div> Coriander </h2>
+      <p>Coriander is there to discover and share recipes. The interface and information architecture of the app are designed to accommodate for the wide range of user generated content.</p>
+    </router-link>
   
+  </div>
   
 </template>
 
 <style scoped>
-.work-view{
+@media (min-width: 200px){
+  #intro{
+    margin: 2vh 10vw 30vh 10vw;
+  }
+  .circle{
+    width: 1em;
+    height: 1em;
+    background-color: var(--text-color);
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 5%;
+  }
+  img{
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    /* padding: 10vw; */
+  }
+  h2, p{
+    margin: 2vh 10vw;
+  }
+  p{
+    margin-bottom: 10vh;
+  }
+
+}
+@media (min-width: 992px){
+  .work-view{
   display: none;
   position: fixed;
   top: 0;
@@ -165,5 +223,7 @@ li:nth-child(5) {
 li:nth-child(6) {
   --fade-delay: 0.5s;
 }
+}
+
 
 </style>

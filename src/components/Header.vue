@@ -37,11 +37,7 @@ export default {
                 this.navActive = true
                 document.querySelector("#responsive-nav").style.left = "0vw"
                 document.querySelector(".nav-content").style.left = "10vw"
-                document.querySelector("#header-title").style.color = "var(--background-color)"
                 const hamburger = document.getElementById("hamburger").children;
-                hamburger[0].style.backgroundColor = "var(--background-color)";
-                hamburger[1].style.backgroundColor = "var(--background-color)";
-                hamburger[2].style.backgroundColor = "var(--background-color)";
                 hamburger[0].style.transform = "rotate(45deg)";
                 hamburger[1].style.width = "0";
                 hamburger[2].style.transform = "rotate(-45deg)";
@@ -52,11 +48,7 @@ export default {
                 this.navActive = false
                 document.querySelector("#responsive-nav").style.left = "-100vw";
                 document.querySelector(".nav-content").style.left = "-100vw";
-                document.querySelector("#header-title").style.color = "var(--text-color)"
                 const hamburger = document.getElementById("hamburger").children;
-                hamburger[0].style.backgroundColor = "var(--text-color)"
-                hamburger[1].style.backgroundColor = "var(--text-color)"
-                hamburger[2].style.backgroundColor = "var(--text-color)"
                 hamburger[0].style.transform = "rotate(0deg)";
                 hamburger[1].style.width = "100%";
                 hamburger[2].style.transform = "rotate(0deg)";
@@ -120,11 +112,12 @@ export default {
         height: 10vh;
         width: 100vw;
         box-sizing: border-box;
-        z-index: 160;
+        z-index: 100;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10% 10vw;
+        background-color: var(--background-color);
     }
     #header-title{
         font-style: normal;
@@ -155,7 +148,7 @@ export default {
         top: 0;
         left: -100vw;
         transition: all .5s ease;
-        z-index: 0;
+        z-index: 60;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -165,7 +158,7 @@ export default {
         top: 10vh;
         height: 80vh;
         width: 80vw;
-        z-index: 160;
+        
         left: -100vw;
         transition: all .5s ease;
         display: flex;
