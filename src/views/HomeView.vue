@@ -39,11 +39,8 @@ export default{
 
       if (document.documentElement.scrollTop > documentHeight / 1.2) {
         document.querySelector(".work-view").style.display = "flex";
-      }
-      else if (document.documentElement.scrollTop < documentHeight / 1.2){
-        document.querySelector(".work-view").style.display = "none";
-      }
-      else{
+        document.querySelector(".webgl").style.display = "none";
+      }else{
         document.querySelector(".work-view").style.display = "none";
       }
     }
@@ -54,8 +51,9 @@ export default{
 </script>
 
 <template>
-    <div id="transitionScreen"></div>
-    <div id="frame"></div>
+
+    <div id="transitionScreen" class="desktop"></div>
+    <div id="frame" class="desktop"></div>
     <Sphere />
     <div id="work">
       <WorkView :links="links"/>

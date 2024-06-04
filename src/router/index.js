@@ -45,12 +45,12 @@ const router = createRouter({
       component: HomeView,
       props: route => ({ links: route.meta.links })
     },
-    // { //UNUSED
-    //   path: '/home#work',
-    //   name: 'work',
-    //   component: WorkView,
-    //   props: route => ({ links: route.meta.links })
-    // },
+    { //only used for responsive
+      path: '/work',
+      name: 'work',
+      component: WorkView,
+      props: route => ({ links: route.meta.links })
+    },
     {
       path: '/about',
       name: 'about',

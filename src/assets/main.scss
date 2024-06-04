@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Mori Regular";
     src: url('./fonts/MoriGothic-Regular.ttf')  format('truetype');
+    font-weight: 400;
 }
 @font-face {
   font-family: "Mori Light";
@@ -12,13 +13,7 @@
   src: url('./fonts/MoriGothic-Bold.ttf')  format('truetype');
   font-weight: 800;
 }
-@font-face {
-  font-family: "Ade";
-  src: url('./fonts/Ade-Display.otf')  format('opentype');
-  font-weight: 100;
-  font-style: normal;
-  text-transform: uppercase;
-}
+
 $light-theme: (
   background: #fafafa,
   text: #232323
@@ -42,31 +37,21 @@ $dark-theme: (
   --background-color: #{get-color($dark-theme, background)};
   --text-color: #{get-color($dark-theme, text)};
 }
-@media (min-width: 200px) {
-  .responsive{
-    display: inline-block;
-  }
+*::selection{
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
-@media (min-width: 992px) {
-  .responsive{
-    display: none;
-  }
-  *::selection{
-    background-color: var(--text-color);
-    color: var(--background-color);
-  }
-  *::-moz-selection{
-    background-color: var(--text-color);
-    color: var(--background-color);
-  }
-  *::-o-selection{
-    background-color: var(--text-color);
-    color: var(--background-color);
-  }
-  *::-ms-selection{
-    background-color: var(--text-color);
-    color: var(--background-color);
-  }
+*::-moz-selection{
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+*::-o-selection{
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
+*::-ms-selection{
+  background-color: var(--text-color);
+  color: var(--background-color);
 }
 @keyframes fadeIn {
   0% { opacity: 0; }
@@ -80,44 +65,58 @@ $dark-theme: (
 body {
   background-color: var(--background-color);
   color: var(--text-color);
-  font-family: 'Mori Light', sans-serif;
+  font-family: 'Mori Regular', sans-serif;
   padding: 0;
   margin: 0;
 }
-main{
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    padding: 15vh 5vw;
-}
-h1{
+@media (min-width: 200px) {
+  .responsive{
+    display: inline-block;
+  }
+  .desktop{
+    display: none;
+  }
+  h1{
     font-weight: 100;
-}
-h2{
-  font-family: 'Mori Bold', sans-serif;
-}
-h3{
-  font-family: 'Mori Bold', sans-serif;
-  text-transform: uppercase;
-  
-}
-a{
+  }
+  h2{
+    font-family: 'Mori Bold', sans-serif;
+    font-size: 1em;
+  }
+  h3{
+    font-family: 'Mori Bold', sans-serif;
+    text-transform: uppercase;
+  }
+  a{
     text-decoration: none;
     color: var(--text-color);
+  }
+
 }
-a:hover{
-  font-style: italic;
-}
-p{
-  font-weight: 100;
-}
-#transitionScreen{
-  position: fixed;
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--background-color);
-  z-index: 5000;
-  pointer-events: none;
-  opacity: 1;
-  transition: opacity .5s ease-in;
+@media (min-width: 992px) {
+  .responsive{
+    display: none;
+  }
+  .desktop{
+    display: inline-block;
+  }
+  main{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 15vh 5vw;
+  }
+  a:hover{
+    font-style: italic;
+  }
+  #transitionScreen{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--background-color);
+    z-index: 5000;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity .5s ease-in;
+  }
 }

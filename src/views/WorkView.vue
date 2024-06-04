@@ -53,7 +53,7 @@ export default{
 </script>
 
 <template>
-  <div class="work-view" >
+  <div class="work-view desktop" >
     <div class="flex-half">
       <div id="case-img"></div>
     </div>

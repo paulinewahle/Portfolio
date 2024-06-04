@@ -27,22 +27,37 @@ export default{
 </template>
 
 <style scoped>
-    button{
-      width: 100px;
-      height: 100px;
+@media (min-width: 200px){
+  button{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--text-color);
+    border: none;
+  }
+  .theme-toggle{
+      width: 0px;
+      height: 0px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: none !important;
-      border: none;
-    }
-    .theme-toggle{
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        border: 0;
-        outline: 2px solid var(--text-color);
-        background: none;
-    }
+      border: 0;
+      background-color: var(--text-color);
+      outline: 0;
+  }
+}
+@media (min-width: 992px) {
+  button{
+    width: 100px;
+    height: 100px;
+    background: none !important;
+  }
+  .theme-toggle{
+      width: 30px;
+      height: 30px;
+      outline: 2px solid var(--text-color);
+      background: none;
+  }
+}
 </style>

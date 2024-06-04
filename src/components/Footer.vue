@@ -17,7 +17,7 @@ export default{
 </script>
 
 <template>
-    <footer>
+    <footer class="desktop">
         <nav>
             <a target="_blank" href="https://www.linkedin.com/in/paulinewahle/"> LinkedIn </a>
             <a href="https://www.behance.net/paulinewahle1" target="_blank"> Behance </a>
