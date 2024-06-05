@@ -72,14 +72,15 @@ export default {
         </nav>
         <ThemeToggle/>
     </header>
-    <header class="responsive responsive-header">
-        <div id="hamburger" @click="responsiveNav()">
-            <span />
-            <span />
-            <span />
-        </div>
-        <RouterLink id="header-title" to="/home" @click="responsiveNav()"> <h2>Pauline Wahle</h2> </RouterLink>
-        <ThemeToggle/>
+    <div class="responsive-header-bg"></div>
+    <header class="responsive responsive-header">  
+            <ThemeToggle/>
+            <RouterLink id="header-title" to="/home" @click="responsiveNav()"> <h2>PAULINE WAHLE</h2> </RouterLink>
+            <div id="hamburger" @click="responsiveNav()">
+                <span />
+                <span />
+                <span />
+            </div>
     </header>
 
     <div id="responsive-nav" class="responsive">
@@ -104,20 +105,29 @@ export default {
     </div>
 </template>
 <style scoped>
-@media (min-width: 200px) {
+@media (max-width: 600px) {
+    .responsive-header-bg{
+        height: 10vh;
+        width: 100vw;
+        position: fixed;
+        background-color: var(--background-color);
+        z-index: 50;
+        top: 0;
+        left: 0;
+    }
     .responsive-header{
+        height: 10vh;
+        width: 100vw;
         position: fixed;
         top: 0;
         left: 0;
-        height: 10vh;
-        width: 100vw;
-        box-sizing: border-box;
-        z-index: 100;
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10% 10vw;
-        background-color: var(--background-color);
+        box-sizing: border-box;
+        z-index: 70;
+        mix-blend-mode: difference;
     }
     #header-title{
         font-style: normal;
@@ -125,6 +135,8 @@ export default {
         text-align: center;
         border: 0;
         text-decoration: none;
+        z-index: 70;
+        color: white;
     }
     #hamburger{
         height: 30px;
@@ -132,11 +144,12 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        z-index: 70;
     }
     span{
         height: 2px; 
         width: 100%;
-        background-color: var(--text-color);
+        background-color: white;
         transition: transform .5s ease;
         transform-origin: top left;
     }
@@ -158,7 +171,6 @@ export default {
         top: 10vh;
         height: 80vh;
         width: 80vw;
-        
         left: -100vw;
         transition: all .5s ease;
         display: flex;
