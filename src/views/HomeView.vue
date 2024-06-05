@@ -42,6 +42,7 @@ export default{
         document.querySelector(".webgl").style.display = "none";
       }else{
         document.querySelector(".work-view").style.display = "none";
+        document.querySelector(".webgl").style.display = "block";
       }
     }
 

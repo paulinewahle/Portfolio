@@ -65,13 +65,13 @@ export default {
 <template>
     <div class="responsive-header-bg"></div>
     <header class="responsive responsive-header">  
-            <ThemeToggle/>
-            <RouterLink id="header-title" to="/home" @click="responsiveNav()"> <h2>PAULINE WAHLE</h2> </RouterLink>
             <div id="hamburger" @click="responsiveNav()">
                 <span />
                 <span />
                 <span />
             </div>
+            <RouterLink id="header-title" to="/home" @click="responsiveNav()"> PAULINE WAHLE </RouterLink>
+            <ThemeToggle/>
     </header>
     <div id="responsive-nav" class="responsive">
         <div class="nav-content responsive">
@@ -139,6 +139,7 @@ export default {
         text-decoration: none;
         z-index: 70;
         color: white;
+
     }
     #hamburger{
         height: 30px;

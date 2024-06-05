@@ -21,14 +21,12 @@ export default{
 </script>
 
 <template>
-    <button @click="toggleTheme"> 
-      <div class="theme-toggle"></div>
-    </button>
+    <button @click="toggleTheme" class="theme-toggle"></button>
 </template>
 
 <style scoped>
 @media (min-width: 200px){
-  button{
+  .theme-toggle{
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -37,28 +35,15 @@ export default{
     justify-content: center;
     background-color: white;
     border: none;
-  }
-  .theme-toggle{
-      width: 0px;
-      height: 0px;
-      border-radius: 50%;
-      border: 0;
-      background-color: var(--text-color);
-      outline: 0;
+    border-radius: 50%;
+    border: 0;
+    outline: 0;
   }
 }
 @media (min-width: 1370px) {
-  button{
-    width: 100px;
-    height: 100px;
-    background: none !important;
-    border: 1px solid;
-  }
   .theme-toggle{
-      width: 30px;
-      height: 30px;
-      outline: 2px solid var(--text-color);
-      background: none;
+    outline: 2px solid var(--text-color);
+    background: none;
   }
 }
 </style>

@@ -17,7 +17,7 @@ export default{
     },
 
     mounted(){
-        //setTimeout(console.log('CursorLinks1:', this.links), 1000);
+        
         setTimeout(() => {
             console.log('CursorLinks2:', this.links);
             this.links.forEach((link) => {
@@ -33,7 +33,6 @@ export default{
         
 
         let mouseCursor = document.querySelector(".cursor");
-        let textCursor = document.querySelector(".text-cursor");
         let arrowCursor = document.querySelector(".arrow-cursor");
         const target = document.querySelector(".theme-toggle");
         const stickDistance = 40; 
@@ -50,13 +49,8 @@ export default{
         const distanceX = cursorX - targetX;
         const distanceY = cursorY - targetY;
         const distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY);
-        // mouseCursor.style.left = e.clientX + "px";
-        // mouseCursor.style.top = e.clientY + "px";
         arrowCursor.style.left = e.clientX + "px";
         arrowCursor.style.top = e.clientY + "px";
-        // textCursor.style.left = e.clientX + "px";
-        // textCursor.style.top = e.clientY + "px";
-
 
         let rightScreen = window.screen.width/2
         let leftScreen = window.screen.width/2
@@ -70,9 +64,8 @@ export default{
             document.querySelector(".arrow-cursor").classList.add("right");
             document.querySelector(".arrow-cursor").classList.remove("left");
         }
-
+        console.log(targetRect);
         if (distance < stickDistance) {
-            console.log("stick");
         mouseCursor.style.left = `${targetX}px`;
         mouseCursor.style.top = `${targetY}px`;
         window.addEventListener("click", ThemeToggle.toggleTheme);
@@ -98,7 +91,6 @@ export default{
 
 <template>
     <div class="arrow-cursor desktop"></div>
-    <!-- <div class="text-cursor desktop"><p>scroll</p></div> -->
     <div class="cursor desktop"> </div>
 </template>
 
