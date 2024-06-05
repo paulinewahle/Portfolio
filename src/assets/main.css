@@ -70,7 +70,21 @@ body {
   margin: 0;
 }
 
-@media (min-width: 200px) {
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.circle {
+  width: 1em;
+  height: 1em;
+  background-color: var(--text-color);
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 5%;
+}
+
+@media (max-width: 600px) {
   .responsive {
     display: inline-block;
   }
@@ -78,7 +92,7 @@ body {
     display: none;
   }
   body {
-    margin-top: 20vh;
+    padding: 20vh 10vw 5vh 10vw;
   }
   h1 {
     font-weight: 100;
@@ -91,22 +105,20 @@ body {
     font-family: "Mori Bold", sans-serif;
     text-transform: uppercase;
   }
-  a {
-    text-decoration: none;
-    color: var(--text-color);
+  img, video {
+    width: 100%;
+    height: 40vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 5% 0;
   }
-  .circle {
-    width: 1em;
-    height: 1em;
-    background-color: var(--text-color);
-    display: inline-block;
-    border-radius: 50%;
-    margin-right: 5%;
+  p, a {
+    font-size: 1em;
   }
 }
 @media (min-width: 992px) {
   .responsive {
-    display: none;
+    display: none !important;
   }
   .desktop {
     display: inline-block;

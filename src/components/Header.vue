@@ -222,6 +222,7 @@ export default {
         height: 10vh;
         z-index: 400;
         position: fixed;
+        /* mix-blend-mode: none; */
     }
     nav{
         position: absolute;

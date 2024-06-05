@@ -124,21 +124,9 @@ export default{
 <style scoped>
 @media (min-width: 200px){
   #intro{
-    margin: 0 10vw 30vh 10vw;
+    margin-bottom: 30vh;
   }
   
-  img{
-    width: 100%;
-    height: 50vh;
-    object-fit: cover;
-    /* padding: 10vw; */
-  }
-  h2, p{
-    margin: 1vh 10vw;
-  }
-  p{
-    margin: 1vh 10vw 10vh 10vw;
-  }
 
 }
 @media (min-width: 992px){

@@ -19,9 +19,9 @@ export default{
   <div id="transitionScreen" class="desktop"></div>
   <div id="about-view" class="responsive">
     <h1>  <div class="circle"></div>UX DESIGN</h1>
-    <p>Hi, I’m Pauline Wahle - user experience designer and frontend developer.
+    <h1>Hi, I’m Pauline Wahle - user experience designer and frontend developer.
       I conceptualise and realise user friendly designs. With five years of experience and two degrees, I draw from a holistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.
-    </p>
+    </h1>
     <Footer/>
   </div>
   <div id="about-view" class="desktop">
@@ -56,7 +56,6 @@ export default{
     </div>
   </div>
   <div id="right-wrapper">
-    <!-- <div id="profile-pic"></div> -->
     <p class="desktop">Hi, I’m Pauline Wahle - user experience designer and frontend developer.
       I conceptualise and realise user friendly designs. With five years of experience and two degrees, I draw from a holistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.
     </p>
@@ -70,7 +69,6 @@ export default{
     #about-view{
       display: flex;
       flex-direction: column;
-      margin: 20vh 10vw;
     }
     h1{
       font-size: 1em;
@@ -78,10 +76,6 @@ export default{
     #email a{
       font-size: 1.5em;
     }
-
-
-
-
   }
   @media (min-width: 992px) {
     #about-view{

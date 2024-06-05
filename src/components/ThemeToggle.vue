@@ -27,7 +27,7 @@ export default{
 </template>
 
 <style scoped>
-@media (max-width: 600px){
+@media (min-width: 200px){
   button{
     width: 30px;
     height: 30px;
