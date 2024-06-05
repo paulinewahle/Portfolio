@@ -69,7 +69,7 @@ body {
   padding: 0;
   margin: 0;
 }
-@media (min-width: 200px) {
+@media (max-width: 600px) {
   .responsive{
     display: inline-block;
   }
@@ -103,6 +103,8 @@ body {
     margin-right: 5%;
   }
 }
+@media (min-width: 600px) {
+}
 @media (min-width: 992px) {
   .responsive{
     display: none;
@@ -129,4 +131,6 @@ body {
     opacity: 1;
     transition: opacity .5s ease-in;
   }
+}
+@media (min-width: 1200px) {
 }

@@ -27,7 +27,7 @@ export default{
 </template>
 
 <style scoped>
-@media (min-width: 200px){
+@media (max-width: 600px){
   button{
     width: 30px;
     height: 30px;
@@ -35,7 +35,7 @@ export default{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--text-color);
+    background-color: white;
     border: none;
   }
   .theme-toggle{
