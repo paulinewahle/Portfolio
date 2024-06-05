@@ -70,7 +70,6 @@ export default{
       flex-direction: column;
     }
     h1{
-      font-size: 1em;
       border-top: 1px solid var(--text-color);
     }
     #email a{
@@ -115,18 +114,15 @@ export default{
       margin: 1%;
     }
     h1{
-      font-size: 5rem;
-      font-weight: 100;
+      border: none;
     }
     h2, a, p{
       font-size: .8rem;
       height: initial;
-      
     }
     h2{
-      text-transform: uppercase;
+  
       width: 30%;
-      font-weight: bold;
       margin: 0;
       display: block;
     }

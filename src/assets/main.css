@@ -14,13 +14,13 @@
   font-weight: 800;
 }
 [data-theme=light] {
-  --background-color: #fafafa;
+  --background-color: #D1CDC2;
   --text-color: #232323;
 }
 
 [data-theme=dark] {
   --background-color: #232323;
-  --text-color: #fafafa;
+  --text-color: #D1CDC2;
 }
 
 *::-moz-selection {
@@ -146,18 +146,32 @@ a {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .responsive {
     display: none !important;
   }
   .desktop {
     display: inline-block;
   }
+  body {
+    padding: 0;
+  }
   main {
     height: 100vh;
     display: flex;
     align-items: center;
     padding: 15vh 5vw;
+  }
+  h1 {
+    font-size: 5rem;
+    font-weight: 100;
+  }
+  h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  p, a {
+    font-size: 1rem;
   }
   a:hover {
     font-style: italic;

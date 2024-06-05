@@ -170,6 +170,7 @@ li{
   opacity: 0;
   text-transform: uppercase;
   font-size: 5rem;
+  font-weight: 100;
   animation: fadeIn 1s forwards;
   animation-delay: var(--fade-delay);
   height: 5rem;
