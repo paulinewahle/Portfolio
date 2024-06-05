@@ -30,7 +30,7 @@ export default {
   
 }
 
-@media (min-width: 1370px) {
+@media (min-width: 1024px) {
   #loading {
     background-color: var(--background-color);
     position: fixed;

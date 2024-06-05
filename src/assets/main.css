@@ -14,13 +14,13 @@
   font-weight: 800;
 }
 [data-theme=light] {
-  --background-color: #D1CDC2;
+  --background-color: #EDECE8;
   --text-color: #232323;
 }
 
 [data-theme=dark] {
   --background-color: #232323;
-  --text-color: #D1CDC2;
+  --text-color: #EDECE8;
 }
 
 *::-moz-selection {
@@ -146,7 +146,7 @@ a {
     font-size: 1.5rem;
   }
 }
-@media (min-width: 1370px) {
+@media (min-width: 1024px) {
   .responsive {
     display: none !important;
   }

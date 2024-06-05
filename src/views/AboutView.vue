@@ -18,7 +18,7 @@ export default{
 <template>
   <div id="transitionScreen" class="desktop"></div>
   <div id="about-view" class="responsive">
-    <h1>  <div class="circle"></div>UX DESIGN</h1>
+    <h2>  <div class="circle"></div>UX DESIGN</h2>
     <p>Hi, I’m Pauline Wahle - user experience designer and frontend developer.
       I conceptualise and realise user friendly designs. With five years of experience and two degrees, I draw from a holistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.
     </p>
@@ -76,7 +76,7 @@ export default{
       font-size: 1.5em;
     }
   }
-  @media (min-width: 1370px) {
+  @media (min-width: 1024px) {
     #about-view{
       flex-direction: row;
       margin: 0;

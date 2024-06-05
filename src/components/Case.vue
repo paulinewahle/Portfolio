@@ -319,7 +319,7 @@ export default {
     margin: 0;
   }
 }
-@media (min-width: 1370px) {
+@media (min-width: 1024px) {
 
 #page-container{
   box-sizing: border-box;

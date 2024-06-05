@@ -64,7 +64,7 @@ export default{
             document.querySelector(".arrow-cursor").classList.add("right");
             document.querySelector(".arrow-cursor").classList.remove("left");
         }
-        console.log(targetRect);
+        // console.log(targetRect);
         if (distance < stickDistance) {
         mouseCursor.style.left = `${targetX}px`;
         mouseCursor.style.top = `${targetY}px`;
@@ -100,7 +100,7 @@ export default{
 
 }
 
-@media (min-width: 1370px) {
+@media (min-width: 1024px) {
 
     .cursor {
         left: 0;

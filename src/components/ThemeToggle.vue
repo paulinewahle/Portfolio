@@ -30,17 +30,13 @@ export default{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: white;
     border: none;
-    border-radius: 50%;
-    border: 0;
     outline: 0;
+    z-index: 70;
   }
 }
-@media (min-width: 1370px) {
+@media (min-width: 1024px) {
   .theme-toggle{
     outline: 2px solid var(--text-color);
     background: none;

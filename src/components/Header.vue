@@ -63,15 +63,25 @@ export default {
 
 </script>
 <template>
-    <div class="responsive-header-bg"></div>
-    <header class="responsive responsive-header">  
-            <div id="hamburger" @click="responsiveNav()">
+    
+            
+   
+    <div class="responsive responsive-header-bg"></div>
+    <header>
+        
+        <div class="responsive" id="hamburger" @click="responsiveNav()">
                 <span />
                 <span />
                 <span />
             </div>
-            <RouterLink id="header-title" to="/home" @click="responsiveNav()"> PAULINE WAHLE </RouterLink>
-            <ThemeToggle/>
+        <RouterLink  class="desktop" id="home" to="/home" @click="scrollUp();">PAULINE WAHLE</RouterLink>
+        <RouterLink class="responsive" id="header-title" to="/home" @click="responsiveNav()"> PAULINE WAHLE </RouterLink>
+        <nav class="desktop">
+            <RouterLink to="/home" :class="{ 'active-site': currentSite === 'home' }" 
+            @click="scrollDown(); currentSite = 'home'" id="work">Work</RouterLink>
+            <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
+        </nav>
+        <ThemeToggle/>
     </header>
     <div id="responsive-nav" class="responsive">
         <div class="nav-content responsive">
@@ -93,15 +103,6 @@ export default {
         </div>
         </div>
     </div>
-    <header class="desktop">
-        <RouterLink id="home" to="/home" @click="scrollUp();">PAULINE WAHLE</RouterLink>
-        <nav>
-            <RouterLink to="/home" :class="{ 'active-site': currentSite === 'home' }" 
-            @click="scrollDown(); currentSite = 'home'" id="work">Work</RouterLink>
-            <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
-        </nav>
-        <ThemeToggle/>
-    </header>
     
 
     
@@ -109,7 +110,7 @@ export default {
 <style scoped>
 @media (min-width: 200px) {
     .responsive-header-bg{
-        height: 10vh;
+        height: 15vh;
         width: 100vw;
         position: fixed;
         background-color: var(--background-color);
@@ -117,8 +118,8 @@ export default {
         top: 0;
         left: 0;
     }
-    .responsive-header{
-        height: 10vh;
+    header{
+        height: 15vh;
         width: 100vw;
         position: fixed;
         top: 0;
@@ -126,7 +127,7 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 10% 10vw;
+        padding: 0 10vw;
         box-sizing: border-box;
         z-index: 70;
         mix-blend-mode: difference;
@@ -137,9 +138,7 @@ export default {
         text-align: center;
         border: 0;
         text-decoration: none;
-        z-index: 70;
         color: white;
-
     }
     #hamburger{
         height: 30px;
@@ -147,7 +146,6 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        z-index: 70;
     }
     span{
         height: 2px; 
@@ -195,15 +193,12 @@ export default {
         font-size: 1em;
         line-height: 1.6em;
     } 
-    p{
-        text-indent: 0;
-    }
 
 }
 @media (min-width: 600px) {
 
 }
-@media (min-width: 1370px) {
+@media (min-width: 1024px) {
     header{
         width: 100vw;
         display: flex;
@@ -216,7 +211,7 @@ export default {
         height: 10vh;
         z-index: 400;
         position: fixed;
-        /* mix-blend-mode: none; */
+        mix-blend-mode: normal;
     }
     nav{
         position: absolute;

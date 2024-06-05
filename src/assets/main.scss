@@ -15,13 +15,13 @@
 }
 
 $light-theme: (
-  background: #D1CDC2,
+  background: #EDECE8,
   text: #232323
 );
 
 $dark-theme: (
   background: #232323,
-  text: #D1CDC2
+  text: #EDECE8
 );
 
 @function get-color($theme, $color-name) {
@@ -142,7 +142,7 @@ a{
     font-size: 1.5rem;
   }
 }
-@media (min-width: 1370px) {
+@media (min-width: 1024px) {
   .responsive{
     display: none !important;
   }
