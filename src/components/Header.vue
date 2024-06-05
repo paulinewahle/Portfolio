@@ -63,25 +63,15 @@ export default {
 
 </script>
 <template>
-    <header class="desktop">
-        <RouterLink id="home" to="/home" @click="scrollUp();">PAULINE WAHLE</RouterLink>
-        <nav>
-            <RouterLink to="/home" :class="{ 'active-site': currentSite === 'home' }" 
-            @click="scrollDown(); currentSite = 'home'" id="work">Work</RouterLink>
-            <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
-        </nav>
-        <ThemeToggle/>
-    </header>
     <header class="responsive responsive-header">
         <div id="hamburger" @click="responsiveNav()">
             <span />
             <span />
             <span />
         </div>
-        <RouterLink id="header-title" to="/home" @click="responsiveNav()"> <h2>Pauline Wahle</h2> </RouterLink>
+        <RouterLink id="header-title" @click="responsiveNav()"> <h2>Pauline Wahle</h2> </RouterLink>
         <ThemeToggle/>
     </header>
-
     <div id="responsive-nav" class="responsive">
         <div class="nav-content responsive">
         <div>
@@ -102,6 +92,19 @@ export default {
         </div>
         </div>
     </div>
+
+    <header class="desktop">
+        <RouterLink id="home" to="/home" @click="scrollUp();">PAULINE WAHLE</RouterLink>
+        <nav>
+            <RouterLink to="/home" :class="{ 'active-site': currentSite === 'home' }" 
+            @click="scrollDown(); currentSite = 'home'" id="work">Work</RouterLink>
+            <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
+        </nav>
+        <ThemeToggle/>
+    </header>
+    
+
+    
 </template>
 <style scoped>
 @media (min-width: 200px) {

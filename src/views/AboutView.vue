@@ -1,5 +1,9 @@
 <script lang>
+import Footer from '../components/Footer.vue';
 export default{
+  components: {
+      Footer,
+    },
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
     document.querySelector(".cursor").style.display = "block";
@@ -12,13 +16,20 @@ export default{
 </script>
 
 <template>
-  <div id="transitionScreen"></div>
-  <div id="about-view">
+  <div id="transitionScreen" class="desktop"></div>
+  <div id="about-view" class="responsive">
+    <h1>  <div class="circle"></div>UX DESIGN</h1>
+    <p>Hi, I’m Pauline Wahle - user experience designer and frontend developer.
+      I conceptualise and realise user friendly designs. With five years of experience and two degrees, I draw from a holistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.
+    </p>
+    <Footer/>
+  </div>
+  <div id="about-view" class="desktop">
   <div id="left-wrapper">
     
-    <h1>UX DESIGN</h1>
-    
-    <div id="links">
+    <h1 class="desktop">UX DESIGN</h1>
+   
+    <div id="links" class="desktop">
       <div id="email">
       <a href="emailto:pauline.wahle@web.de" target="_blank">pauline.wahle@web.de</a>
       <h2>Get In Touch</h2>
@@ -46,7 +57,7 @@ export default{
   </div>
   <div id="right-wrapper">
     <!-- <div id="profile-pic"></div> -->
-    <p>Hi, I’m Pauline Wahle - user experience designer and frontend developer.
+    <p class="desktop">Hi, I’m Pauline Wahle - user experience designer and frontend developer.
       I conceptualise and realise user friendly designs. With five years of experience and two degrees, I draw from a holistic view on design, usability and technology. Always considering the usability aspect, I find it fascinating to explore and reimagine digital spaces in new ways that surprise, simplify and create lasting impressions. By taking opportunities to establish original ideas, each design can get a unique look and feel. My basis for both design and development is creative thinking, to stay flexible, keep moving and find alternative paths.
     </p>
   </div>
@@ -54,10 +65,28 @@ export default{
 </template>
 
 <style scoped>
-  @media (min-width: 992px) {
+  @media (min-width: 200px) {
+
     #about-view{
       display: flex;
+      flex-direction: column;
+      margin: 20vh 10vw;
+    }
+    h1{
+      font-size: 1em;
+    }
+    #email a{
+      font-size: 1.5em;
+    }
+
+
+
+
+  }
+  @media (min-width: 992px) {
+    #about-view{
       flex-direction: row;
+      margin: 0;
     }
     #left-wrapper, #right-wrapper{
       width: 50vw;
@@ -65,7 +94,6 @@ export default{
       padding: 15vh 5vw;
       display: flex;
       flex-direction: column;
-      
     }
     #left-wrapper{
       justify-content: space-between;
@@ -99,12 +127,14 @@ export default{
     h2, a, p{
       font-size: .8rem;
       height: initial;
+      
     }
     h2{
       text-transform: uppercase;
       width: 30%;
       font-weight: bold;
       margin: 0;
+      display: block;
     }
     a{
       margin-right: 1em;

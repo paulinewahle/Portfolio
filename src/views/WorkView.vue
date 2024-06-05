@@ -116,7 +116,7 @@ export default{
       <h2> <div class="circle"></div> Coriander </h2>
       <p>Coriander is there to discover and share recipes. The interface and information architecture of the app are designed to accommodate for the wide range of user generated content.</p>
     </router-link>
-  
+  <Footer/>
   </div>
   
 </template>
@@ -124,16 +124,9 @@ export default{
 <style scoped>
 @media (min-width: 200px){
   #intro{
-    margin: 2vh 10vw 30vh 10vw;
+    margin: 0 10vw 30vh 10vw;
   }
-  .circle{
-    width: 1em;
-    height: 1em;
-    background-color: var(--text-color);
-    display: inline-block;
-    border-radius: 50%;
-    margin-right: 5%;
-  }
+  
   img{
     width: 100%;
     height: 50vh;
@@ -141,10 +134,10 @@ export default{
     /* padding: 10vw; */
   }
   h2, p{
-    margin: 2vh 10vw;
+    margin: 1vh 10vw;
   }
   p{
-    margin-bottom: 10vh;
+    margin: 1vh 10vw 10vh 10vw;
   }
 
 }
