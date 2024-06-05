@@ -63,15 +63,6 @@ export default {
 
 </script>
 <template>
-    <header class="desktop">
-        <RouterLink id="home" to="/home" @click="scrollUp();">PAULINE WAHLE</RouterLink>
-        <nav>
-            <RouterLink to="/home" :class="{ 'active-site': currentSite === 'home' }" 
-            @click="scrollDown(); currentSite = 'home'" id="work">Work</RouterLink>
-            <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
-        </nav>
-        <ThemeToggle/>
-    </header>
     <div class="responsive-header-bg"></div>
     <header class="responsive responsive-header">  
             <ThemeToggle/>
@@ -102,7 +93,6 @@ export default {
         </div>
         </div>
     </div>
-
     <header class="desktop">
         <RouterLink id="home" to="/home" @click="scrollUp();">PAULINE WAHLE</RouterLink>
         <nav>
@@ -117,7 +107,7 @@ export default {
     
 </template>
 <style scoped>
-@media (max-width: 600px) {
+@media (min-width: 200px) {
     .responsive-header-bg{
         height: 10vh;
         width: 100vw;
@@ -207,6 +197,9 @@ export default {
     p{
         text-indent: 0;
     }
+
+}
+@media (min-width: 600px) {
 
 }
 @media (min-width: 992px) {

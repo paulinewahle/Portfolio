@@ -126,8 +126,6 @@ export default{
   #intro{
     margin-bottom: 30vh;
   }
-  
-
 }
 @media (min-width: 992px){
   .work-view{
