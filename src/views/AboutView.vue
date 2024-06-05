@@ -76,7 +76,7 @@ export default{
       font-size: 1.5em;
     }
   }
-  @media (min-width: 992px) {
+  @media (min-width: 1370px) {
     #about-view{
       flex-direction: row;
       margin: 0;

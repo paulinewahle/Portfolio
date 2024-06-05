@@ -67,7 +67,7 @@ export default{
 
 
 }
-@media (min-width: 992px) {
+@media (min-width: 1370px) {
 body{
   height: 150vh !important;
 }

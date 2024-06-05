@@ -47,11 +47,12 @@ export default{
       outline: 0;
   }
 }
-@media (min-width: 992px) {
+@media (min-width: 1370px) {
   button{
     width: 100px;
     height: 100px;
     background: none !important;
+    border: 1px solid;
   }
   .theme-toggle{
       width: 30px;

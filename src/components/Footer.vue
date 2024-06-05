@@ -91,7 +91,7 @@ export default{
     }
   
 }
-@media (min-width: 992px){
+@media (min-width: 1370px){
     footer{
         box-sizing: border-box;
         height: 8vh;

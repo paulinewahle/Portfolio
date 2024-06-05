@@ -49,7 +49,7 @@ export default{
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1370px) {
     h1{
         font-size: 15rem;
     }

@@ -72,6 +72,7 @@ export default{
         }
 
         if (distance < stickDistance) {
+            console.log("stick");
         mouseCursor.style.left = `${targetX}px`;
         mouseCursor.style.top = `${targetY}px`;
         window.addEventListener("click", ThemeToggle.toggleTheme);
@@ -104,10 +105,10 @@ export default{
 
 <style scoped>
 @media (min-width: 200px) {
-    
+
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1370px) {
 
     .cursor {
         left: 0;

@@ -127,7 +127,7 @@ export default{
     margin-bottom: 30vh;
   }
 }
-@media (min-width: 992px){
+@media (min-width: 1370px){
   .work-view{
   display: none;
   position: fixed;

@@ -16,7 +16,7 @@ export default {
 
 <template>
     <div id="loading" class="desktop">
-      <h2>Pauline <br> Wahle <br> </h2>
+      <h1>Pauline <br> Wahle <br> </h1>
       <ul>
         <li>User</li>
         <li>Experience</li>
@@ -30,7 +30,7 @@ export default {
   
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1370px) {
   #loading {
     background-color: var(--background-color);
     position: fixed;
@@ -44,14 +44,14 @@ export default {
     align-items: center;
     font-size: 1.5em;
   }
-  h2, ul{
+  h1, ul{
     font-size: 1em;
     width: 10vw;
     position: fixed;
     height: 5em;
     line-height: 1.2em;
   }
-  h2{
+  h1{
     left: 40vw;
     text-align: end;
     font-family: "Mori Light";

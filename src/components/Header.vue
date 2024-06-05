@@ -202,7 +202,7 @@ export default {
 @media (min-width: 600px) {
 
 }
-@media (min-width: 992px) {
+@media (min-width: 1370px) {
     header{
         width: 100vw;
         display: flex;
