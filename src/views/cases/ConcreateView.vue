@@ -14,12 +14,17 @@ data() {
     pagetitle5: 'E-Publication',
     pagetitle6: 'Tutorials',
     pagetitle7: 'Chapters',
+
     casename: 'Concreate',
     casetype: 'Graphic Design',
-    casetext: 'The CONCREATE zine is an exploration of brutalist style across graphic design, architecture, art, typography and web design. The project was completed by five students from Jönköping University in 2021. ',
+    casetext: 'The CONCREATE zine is an exploration of brutalism across graphic design, architecture, art, typography and web design.Published in 2021, the editorial team consists of five design students from Jönköping University.',
     caselink: '/cases/concreate/concreate.epub',
     caselinktext: 'Get the e-Publication',
+    caseroles: 'ArtDirector GraphicDesigner Editor Writer Photographer',
+    casestakeholders: 'ManagingEditor Writers Bloggers DigitalPublisher',
+    casetools: 'InDesign Photoshop Illustrator AfterEffects Lightroom',
     casemore: '',
+
     content1: '/cases/concreate/Concreate_1.jpg',
     content2: '/cases/concreate/Concreate_2.jpg',
     content3: '/cases/concreate/Concreate_3.jpg',
