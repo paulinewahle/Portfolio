@@ -17,7 +17,7 @@ data() {
 
     casename: 'Concreate',
     casetype: 'Graphic Design',
-    casetext: 'The CONCREATE zine is an exploration of brutalism across graphic design, architecture, art, typography and web design.Published in 2021, the editorial team consists of five design students from Jönköping University.',
+    casetext: 'The CONCREATE zine is an exploration of brutalism across graphic design, architecture, art, typography and web design. Published in 2021, the editorial team consists of five design students from Jönköping University.',
     caselink: '/cases/concreate/concreate.epub',
     caselinktext: 'Get the e-Publication',
     caseroles: 'ArtDirector GraphicDesigner Editor Writer Photographer',

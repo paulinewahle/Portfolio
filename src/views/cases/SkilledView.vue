@@ -19,8 +19,9 @@ data() {
     casetext: 'The Skilled concept is  an educational platform application streamlined for optimal usability. The user experience revolves around a distinctive brand identity characterised by a flat primary blue duotone design, complemented by an icon category system in a sleek vector line style.',
     caselink: '',
     caselinktext: '',
-    caseroles: 'UX/UI Designer',
-    casestakeholders: 'Client End Users Advisors',
+    casetype: 'App Design',
+    caseroles: 'UX/UIDesigner',
+    casestakeholders: 'Client EndUsers Advisors',
     casetools: 'Figma Illustrator',
     casemore: 'Education is pivotal in todays ever-changing world, serving as a cornerstone for personal and professional development.',
 

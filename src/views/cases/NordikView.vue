@@ -21,10 +21,10 @@ data() {
     casetype: 'E-commerce Ui Concept',
     caselink: '',
     caselinktext: '',
-    caseroles: 'UI Designer',
-    casestakeholders: 'Client End Users Advisors',
+    caseroles: 'UIDesigner',
+    casestakeholders: 'Client EndUsers Advisors',
     casetools: 'Figma',
-    casemore: '',
+    casemore: 'The modern nordic style e-commerce user interface concept emphasizes minimalism and functionality, providing users with a clean, intuitive, and visually appealing shopping experience. ',
 
     content1: '/cases/nordik/Nordik_1d.mp4',
     content2: '/cases/nordik/Nordik_2d.jpg',

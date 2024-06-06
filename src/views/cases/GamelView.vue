@@ -8,12 +8,12 @@ components: {
 data() {
   return {
     pagetitle1: 'Landing Page',
-    pagetitle2: 'Challenge',
-    pagetitle3: 'Animations',
-    pagetitle4: 'Project Page',
-    pagetitle5: 'Interaction',
-    pagetitle6: 'Cursor',
-    pagetitle7: 'Content',
+    pagetitle2: 'Interactions',
+    pagetitle3: 'Templates',
+    pagetitle4: 'Interactions',
+    pagetitle5: 'Navigation',
+    pagetitle6: 'Navigation',
+    pagetitle7: 'Interactions',
 
     casename: 'Gamél',
     casetext: 'The web presence of the danish production agency Gamél centralises its photo- and videographic content in the modern minimalist grid style design in muted tones. With attention to detail elements in the animation of user interaction points. The project was build in CMS with custom code and launched July 2022. ',
@@ -23,12 +23,12 @@ data() {
     caseroles: 'UIDesigner WebDesigner Developer',
     casestakeholders: 'CEO ProjectManager FreelanceDevelopers',
     casetools: 'Wordpress Elementor HTML/CSS Javascript Figma Github',
-    casemore: 'Challenge. In the heart of this re-design stood the wish to make this website as much a portfolio of beautiful work as well as a platform to connect, update and share. This was achieved by dividing the home screen into two. Users can toggle between “work” and the overlaying full-page “meanwhile” slider, containing three individually scrollable columns.',
+    casemore: 'The Challenge: In the heart of this re-design stood the wish to make this website as much a portfolio of beautiful work as well as a platform to connect, update and share. This was achieved by dividing the home screen into two. Users can toggle between “work” and the overlaying full-page “meanwhile” slider, containing three individually scrollable columns.',
 
     content1: '/cases/gamel/Gamel_1d.mp4',
     content2: '/cases/gamel/Gamel_2d.mp4',
     content3: '/cases/gamel/Gamel_3d.mp4',
-    content4: '/cases/gamel/Gamel_2d.mp4',
+    content4: '/cases/gamel/Gamel_4d.mp4',
     content5: '/cases/gamel/Gamel_5d.jpg',
     content6: '/cases/gamel/Gamel_6d.jpg',
     content7: '/cases/gamel/Gamel_7d.mp4'
