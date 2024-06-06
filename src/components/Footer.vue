@@ -1,24 +1,29 @@
 <script lang>
 export default{
-    
+    data() {
+    return {
+      scrollPercent: 0
+    };
+  },
     mounted() {
-    const percentLabel = document.querySelector("#percent");
-      window.addEventListener("scroll", () => {
-        let scrollTop = window.scrollY;
-        let docHeight = document.documentElement.scrollHeight; 
-        let winHeight = window.innerHeight;
-        let scrollPercent = scrollTop / (docHeight - winHeight);
-        let scrollPercentRounded = Math.min(100, Math.round(scrollPercent * 100));
-        percentLabel.innerHTML = `${scrollPercentRounded}%`;
-        console.log(percentLabel);
-      });
+        window.addEventListener("scroll", this.updateScrollPercent);
+    },
+    methods: {
+    updateScrollPercent() {
+      let scrollTop = window.scrollY;
+      let docHeight = document.documentElement.scrollHeight;
+      let winHeight = window.innerHeight;
+      let scrollPercent = scrollTop / (docHeight - winHeight);
+      this.scrollPercent = Math.min(100, Math.round(scrollPercent * 100));
+      console.log(this.scrollPercent);
     }
-}
+  }
+};
 
 </script>
 
 <template>
-    <!-- <footer class="responsive">
+    <footer class="responsive">
         <RouterLink to="/about"> About </RouterLink>
         <RouterLink to="/work"> Work </RouterLink>
 
@@ -47,7 +52,7 @@ export default{
                 <a href="https://www.webguruawards.com/sites/paulinewahle-com" target="_blank" class="about-link"> WebGuru Awards</a>
             </span>
         </div>
-    </footer> -->
+    </footer>
 
     <footer class="desktop">
         <nav>
@@ -59,14 +64,13 @@ export default{
         
         <p class="desktop" id="scrollbutton">Scroll to continue . . .</p>
         <p id="scroll-percentage" class="desktop">
-        <span id="percent">0%</span>
-        
+        <span id="percent">{{ scrollPercent }} %</span>
         </p>
     </footer>
 </template>
 
 <style scoped>
-@media (min-width: 200px) {
+@media (max-width: 1023px) {
     footer{
         width: 100%;
         margin: 10vh 0 1vh 0;
@@ -86,7 +90,7 @@ export default{
         margin: 0;
     }
   
-} */
+} 
 @media (min-width: 1024px){
     footer{
         box-sizing: border-box;
@@ -105,8 +109,8 @@ export default{
         justify-content: space-between;
         margin-left: 5vw;
         font-size: .9em;
-    }
-    #scrollbutton{
+    } 
+  #scrollbutton{
         position: absolute;
         left: 50vw;
     }
@@ -114,6 +118,7 @@ export default{
         position: absolute;
         left: 93vw;
     }
+
 }
     
 </style>

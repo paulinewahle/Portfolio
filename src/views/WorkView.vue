@@ -116,7 +116,6 @@ export default{
       <h2> <div class="circle"></div> Coriander </h2>
       <p>Coriander is there to discover and share recipes. The interface and information architecture of the app are designed to accommodate for the wide range of user generated content.</p>
     </router-link>
-  <Footer/>
   </div>
   
 </template>
