@@ -5,11 +5,12 @@ export default{
     const percentLabel = document.querySelector("#percent");
       window.addEventListener("scroll", () => {
         let scrollTop = window.scrollY;
-        let docHeight = document.documentElement.scrollHeight; // Correctly get the document height
+        let docHeight = document.documentElement.scrollHeight; 
         let winHeight = window.innerHeight;
         let scrollPercent = scrollTop / (docHeight - winHeight);
         let scrollPercentRounded = Math.min(100, Math.round(scrollPercent * 100));
-        percentLabel.innerHTML = `${scrollPercentRounded}%`;
+        document.body.innerHTML = `${scrollPercentRounded}%`;
+        console.log(scrollPercentRounded);
       });
     }
 }
@@ -45,7 +46,6 @@ export default{
             <span>
                 <p>Awards</p>
                 <a href="https://www.webguruawards.com/sites/paulinewahle-com" target="_blank" class="about-link"> WebGuru Awards</a>
-
             </span>
         </div>
         
@@ -70,7 +70,7 @@ export default{
 </template>
 
 <style scoped>
-@media (min-width: 200px) {
+@media (max-width: 1024px) {
     footer{
         width: 100%;
         margin: 10vh 0 1vh 0;
@@ -101,6 +101,7 @@ export default{
         position: fixed;
         top: 90vh;
         z-index: 100;
+        margin: 0;
     }
     nav{
         width: 25vw;
