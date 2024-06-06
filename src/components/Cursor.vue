@@ -64,6 +64,7 @@ export default{
             document.querySelector(".arrow-cursor").classList.add("right");
             document.querySelector(".arrow-cursor").classList.remove("left");
         }
+
         // console.log(targetRect);
         if (distance < stickDistance) {
         mouseCursor.style.left = `${targetX}px`;
@@ -144,31 +145,6 @@ export default{
         border-right: 2px solid black;
         border-top: 2px solid black;
         box-shadow: 2px -2px 0 0px #fafafa;
-    }
-    /* .text-cursor{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        left: 0;
-        top: 0;
-        width: 80px;
-        height: 80px;
-        margin-top: -40px;
-        margin-left: -40px;
-        position: fixed;
-        z-index: 1000;
-        pointer-events: none;
-        font-size: 13px;
-        font-style: italic;
-        white-space: nowrap;
-        border: 1px solid var(--text-color);
-        border-radius: 50%;
-    } */
-    .text-cursor p{
-        height: auto;
-        text-align: center;
-
-        /* border: 1px solid; */
     }
     
 }

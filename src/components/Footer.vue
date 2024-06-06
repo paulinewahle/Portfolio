@@ -15,7 +15,6 @@ export default{
       let winHeight = window.innerHeight;
       let scrollPercent = scrollTop / (docHeight - winHeight);
       this.scrollPercent = Math.min(100, Math.round(scrollPercent * 100));
-      console.log(this.scrollPercent);
     }
   }
 };
