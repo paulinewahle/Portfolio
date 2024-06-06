@@ -17,21 +17,21 @@ data() {
 
     casename: 'Coriander',
     casetype: 'App Design',
-    casetext: 'Coriander is there to discover and share recipes. The interface and information architecture of the app are designed to accommodate for the wide range of user generated content. ',
+    casetext: 'Coriander is there to discover and share recipes. The interface and information architecture of the app are designed to accommodate for the wide range of user generated content.',
     caselink: '',
     caselinktext: '',
-    caseroles: 'UX Designer',
-    casestakeholders: 'Text',
-    casetools: 'Figma Instagram',
-    casemore: '',
+    caseroles: 'UXResearcher UIDesigner',
+    casestakeholders: 'ProductManager Developers QA',
+    casetools: 'Figma',
+    casemore: 'User Goals: 1.Find relevant content efficiently (Known-item seeking) 2.Enjoyable browsing experience (Exploratory seeking) 3.Subsequently storing content (Re-finding)',
 
     content1: '/cases/coriander/Coriander_1d.jpg',
     content2: '/cases/coriander/Coriander_2d.jpg',
     content3: '/cases/coriander/Coriander_3d.jpg',
     content4: '/cases/coriander/Coriander_4d.jpg',
     content5: '/cases/coriander/Coriander_5d.jpg',
-    content6: '/cases/coriander/Coriander_6d.jpg',
-    content7: '/cases/coriander/Coriander_7d.jpg',
+    content6: '/cases/coriander/Coriander_7d.jpg',
+    content7: '/cases/coriander/Coriander_6d.jpg',
   }
 }
 }

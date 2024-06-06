@@ -9,8 +9,8 @@ export default{
         let winHeight = window.innerHeight;
         let scrollPercent = scrollTop / (docHeight - winHeight);
         let scrollPercentRounded = Math.min(100, Math.round(scrollPercent * 100));
-        document.body.innerHTML = `${scrollPercentRounded}%`;
-        console.log(scrollPercentRounded);
+        percentLabel.innerHTML = `${scrollPercentRounded}%`;
+        console.log(percentLabel);
       });
     }
 }
@@ -18,8 +18,7 @@ export default{
 </script>
 
 <template>
-    <footer class="responsive">
-
+    <!-- <footer class="responsive">
         <RouterLink to="/about"> About </RouterLink>
         <RouterLink to="/work"> Work </RouterLink>
 
@@ -48,10 +47,7 @@ export default{
                 <a href="https://www.webguruawards.com/sites/paulinewahle-com" target="_blank" class="about-link"> WebGuru Awards</a>
             </span>
         </div>
-        
-        
-        
-    </footer>
+    </footer> -->
 
     <footer class="desktop">
         <nav>
@@ -70,7 +66,7 @@ export default{
 </template>
 
 <style scoped>
-@media (max-width: 1024px) {
+@media (min-width: 200px) {
     footer{
         width: 100%;
         margin: 10vh 0 1vh 0;
@@ -90,7 +86,7 @@ export default{
         margin: 0;
     }
   
-}
+} */
 @media (min-width: 1024px){
     footer{
         box-sizing: border-box;

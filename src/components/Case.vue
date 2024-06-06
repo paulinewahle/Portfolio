@@ -45,7 +45,6 @@ export default {
   methods:{ 
     hideElement(content, imgId, vidId) {
       if (content && content.includes('.mp4')) {
-        document.querySelector(imgId).style.display = 'none';
         document.querySelector(vidId).style.display = 'block';
       } else if (content && (content.includes('.jpg') || content.includes('.png'))) {
         document.querySelector(imgId).style.display = 'block';
