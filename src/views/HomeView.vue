@@ -81,7 +81,6 @@ body{
   margin: 0;
   box-sizing: border-box;
   border: solid var(--background-color);
-  /* border: solid blue; */
   z-index: 10;
   pointer-events: none;
   } 

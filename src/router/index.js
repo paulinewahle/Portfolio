@@ -20,14 +20,9 @@ const router = createRouter({
     if (to.hash) {
       return {
         el: to.hash,
-        // behavior: 'smooth',
       }
     }
   },
-  // beforeEach(to, from, next) {
-  //   to.meta.links = links; // Ensure links is passed in meta
-  //   next();
-  // },
   routes: [
     {
       path: '/:pathMatch(.*)*',

@@ -19,10 +19,8 @@ export default{
     mounted(){
         
         setTimeout(() => {
-            console.log('CursorLinks2:', this.links);
             this.links.forEach((link) => {
                 link.addEventListener("mouseover", () => {
-                    console.log("hoverliunk");
                     mouseCursor.style.scale = 3;
                 });
                 link.addEventListener("mouseleave", () => {
@@ -65,7 +63,6 @@ export default{
             document.querySelector(".arrow-cursor").classList.remove("left");
         }
 
-        // console.log(targetRect);
         if (distance < stickDistance) {
         mouseCursor.style.left = `${targetX}px`;
         mouseCursor.style.top = `${targetY}px`;

@@ -49,9 +49,6 @@ export default{
   }
 }
 @media (min-width: 1024px) {
-  button{
-    
-  }
   .theme-toggle{
     outline: 2px solid var(--text-color);
     background: none;

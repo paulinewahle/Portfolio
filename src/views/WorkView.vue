@@ -15,16 +15,6 @@ export default{
       Footer,
       Sphere
   },
-  setup() {
-    const router = useRouter();
-    const routes = router.getRoutes(); // Access the routes
-    const excludedRoutes = ['home', 'PageNotFound', 'about']; // Add any other route names you want to exclude
-    const workRoutes = routes.filter(route => !excludedRoutes.includes(route.name));
-
-    return {
-      workRoutes
-    };
-  },
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
    
@@ -34,7 +24,6 @@ export default{
           this.links.push(element);
       });
     }
-    console.log('WorkLinks:', this.links);
 
   },
   methods:{
@@ -78,11 +67,6 @@ export default{
         HiTech
         </router-link></li>
       </ul>
-      <!-- <ul>
-          <li class="fade-item" v-for="route in workRoutes" :key="route.name" >
-            <router-link :to="route.path">{{ route.name }}</router-link>
-          </li>
-      </ul> -->
     </div>
     
     </div>

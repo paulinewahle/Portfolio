@@ -203,7 +203,6 @@ export default{
 
     tick()
 
-        ////////
         gsap.registerPlugin(ScrollTrigger); 
 
         gsap.to(sphere.rotation, {
@@ -281,7 +280,6 @@ body{
     left: 0;
     outline: none;
     z-index: 2;
-    /* pointer-events: none; */
 }
 
 
