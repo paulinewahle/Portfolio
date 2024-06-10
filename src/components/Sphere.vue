@@ -22,8 +22,7 @@ export default{
     const textureLoader = new THREE.TextureLoader();
     const normalMap = new URL('../assets/img/maps/Stylized_Lava_Rocks_001_normal.png', import.meta.url);
     const normalTexture = textureLoader.load(normalMap);
-    const heightMap = new URL('../assets/img/src/maps/Stylized_Lava_Rocks_001_height.png', import.meta.url);
-    const heightTexture = textureLoader.load(heightMap);
+   
     
 
     // Canvas
@@ -52,8 +51,8 @@ export default{
         ior: 0.9,
         side: THREE.DoubleSide,
         normalMap: normalTexture,
-        displacementMap: heightTexture,
-        displacementScale: 60
+        
+    
     })
     
 
