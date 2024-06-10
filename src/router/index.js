@@ -10,6 +10,7 @@ import HitechView from '/src/views/cases/HitechView.vue'
 import GamelView from '/src/views/cases/GamelView.vue'
 import SkilledView from '/src/views/cases/SkilledView.vue'
 import CorianderView from '/src/views/cases/CorianderView.vue'
+import NestlinkView from '/src/views/cases/NestlinkView.vue'
 
 
 
@@ -80,7 +81,12 @@ const router = createRouter({
       path: '/coriander',
       name: 'coriander',
       component: CorianderView
-    }
+    },
+    {
+      path: '/nestlink',
+      name: 'nestlink',
+      component: NestlinkView
+    },
     
   ]
 })

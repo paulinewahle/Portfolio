@@ -16,7 +16,7 @@ export default{
 
    mounted(){
         //1,5,8
-    const hdrTextureURL = new URL('../assets/img/film.hdr', import.meta.url);
+    const hdrTextureURL = new URL('../assets/img/pinkswirl.hdr', import.meta.url);
     
     //Loading
     const textureLoader = new THREE.TextureLoader();
@@ -126,35 +126,7 @@ export default{
 
     const controls = new CustomOrbitControls(camera, canvas)
     controls.enableDamping = true
-    // class CustomMouseFollowControl {
-    // constructor(camera, canvas) {
-    //     this.camera = camera;
-    //     this.canvas = canvas;
-
-    //     this.mouseX = 0;
-    //     this.mouseY = 0;
-
-    //     this.canvas.addEventListener('mousemove', this.onMouseMove.bind(this), false);
-    // }
-
-    // onMouseMove(event) {
-    //     this.mouseX = (event.clientX / this.canvas.width) * 2 - 1;
-    //     this.mouseY = - (event.clientY / this.canvas.height) * 2 + 1;
-    // }
-
-    // update() {
-    //     this.camera.position.x += (this.mouseX - this.camera.position.x) * 0.05;
-    //     this.camera.position.y += (- this.mouseY - this.camera.position.y) * 0.05;
-
-    //     this.camera.lookAt(0, 0, 0);
-    // }
-// }
-
-    // const controls = new OrbitControls(camera, canvas)
-    // controls.enableDamping = true
-
-
-
+   
     /**
      * Renderer
      */
@@ -217,18 +189,18 @@ export default{
         },
             y: Math.PI
         });
-        gsap.to(sphere.material, {
-            scrollTrigger: {
-            trigger: "body",
-            start: "center center",
-            end: "bottom bottom",
-            duration: 2.5, 
-            yoyoEase: true,
-            scrub: true,
-            toggleActions: "restart pause reverse none"
-        },
-            opacity: 0,
-        });
+        // gsap.to(sphere.material, {
+        //     scrollTrigger: {
+        //     trigger: "body",
+        //     start: "center center",
+        //     end: "bottom bottom",
+        //     duration: 2.5, 
+        //     yoyoEase: true,
+        //     scrub: true,
+        //     toggleActions: "restart pause reverse none"
+        // },
+        //     opacity: 0,
+        // });
         gsap.to(".webgl", {
             scrollTrigger: {
             trigger: "body",
@@ -241,28 +213,18 @@ export default{
         },
             scale: 3
         });
-
- 
    }
-   
-
 }
-
 
 
 </script>
 
 <template>
- 
 <body>
-    
-
     <main class="desktop">
         <canvas class="webgl"></canvas>
     </main>
-    
 </body>
-
 </template>
 
 <style scoped>

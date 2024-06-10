@@ -27,10 +27,6 @@ export default {
   
 <style scoped>
 @media (min-width: 200px) {
-  
-}
-
-@media (min-width: 1024px) {
   #loading {
     background-color: var(--background-color);
     position: fixed;
@@ -52,7 +48,7 @@ export default {
     line-height: 1.2em;
   }
   h1{
-    left: 40vw;
+    left: 25vw;
     text-align: end;
     font-family: "Mori Light";
     font-weight: 100;
@@ -82,6 +78,11 @@ li:nth-child(2) {
 li:nth-child(3) {
   --fade-delay: .9s;
 }
-
 }
-  </style>
+
+@media (min-width: 1024px) {
+  h1{
+    left: 40vw;
+  }
+}
+</style>

@@ -48,23 +48,26 @@ export default{
     </div>
     <div class="flex-half">
       <ul>
-        <li>01<router-link to="/coriander" class="work-link" @mouseover=' revealCaseImg("/cases/coriander/Coriander.jpg");' @mouseleave="hideCaseImg();">
-        Coriander
+        <!-- <li>01<router-link to="/nestlink" class="work-link" @mouseover=' revealCaseImg("/cases/nestlink/NestLink.jpg");' @mouseleave="hideCaseImg();">
+          NestLink
+        </router-link></li> -->
+        <li>01<router-link to="/nestlink" class="work-link" @mouseover=' revealCaseImg("/cases/nestlink/NestLink.jpg");' @mouseleave="hideCaseImg();">
+          NestLink
         </router-link></li>
-        <li>02<router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/cases/nordik/Nordik.jpg");' @mouseleave="hideCaseImg();">
-        Nordik
+        <li>02<router-link to="/coriander" class="work-link" @mouseover=' revealCaseImg("/cases/coriander/Coriander.jpg");' @mouseleave="hideCaseImg();">
+          Coriander
         </router-link></li>
-        <li>03<router-link to="/gamel" class="work-link" @mouseover=' revealCaseImg("/cases/gamel/Gamel.jpg");' @mouseleave="hideCaseImg();">
-        Gamél
+        <li>03<router-link to="/nordik" class="work-link" @mouseover=' revealCaseImg("/cases/nordik/Nordik.jpg");' @mouseleave="hideCaseImg();">
+          Nordik
         </router-link></li>
-        <li>04<router-link to="/skilled" class="work-link" @mouseover=' revealCaseImg("/cases/skilled/Skilled.jpg");' @mouseleave="hideCaseImg();">
-        Skilled
+        <li>04<router-link to="/gamel" class="work-link" @mouseover=' revealCaseImg("/cases/gamel/Gamel.jpg");' @mouseleave="hideCaseImg();">
+          Gamél
         </router-link></li>
-        <li>05<router-link to="/concreate" class="work-link" @mouseover=' revealCaseImg("/cases/concreate/Concreate.jpg");' @mouseleave="hideCaseImg();">
-        Concreate
+        <li>06<router-link to="/skilled" class="work-link" @mouseover=' revealCaseImg("/cases/skilled/Skilled.jpg");' @mouseleave="hideCaseImg();">
+          Skilled
         </router-link></li>
-        <li>06<router-link to="/hitech" class="work-link" @mouseover=' revealCaseImg("/cases/hitech/Hitech.jpg");' @mouseleave="hideCaseImg();">
-        HiTech
+        <li>07<router-link to="/concreate" class="work-link" @mouseover=' revealCaseImg("/cases/concreate/Concreate.jpg");' @mouseleave="hideCaseImg();">
+          Concreate
         </router-link></li>
       </ul>
     </div>
@@ -73,8 +76,13 @@ export default{
 
 
   <div class="responsive" id="work-wrapper">
-    <p id="intro"> Nordik is a webshop concept in minimalistic grid design. With a compact top-down deep information structure the design is user intuitive according to the sites hierarchical task analysis.</p>
+    <h1 id="intro"> Taking opportunities to establish original ideas.</h1>
 
+    <router-link to="/nestlink" class="case-card">
+      <img src="/cases/nestlink/NestLink.jpg" alt="">
+      <h2> <div class="circle"></div> NestLink </h2>
+      <p>The UI design concept incorporates neomorphic elements for a soft and cohesive interface. This modern approach blends realism with simplicity, providing intuitive interactions.</p>
+    </router-link>
     <router-link to="/nordik" class="case-card">
       <img src="/cases/nordik/Nordik.jpg" alt="">
       <h2> <div class="circle"></div> Nordik </h2>
