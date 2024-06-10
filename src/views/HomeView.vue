@@ -18,7 +18,7 @@ export default{
 
     setTimeout(() => {
       document.querySelector('#transitionScreen').style.opacity = "0";
-    }, 100);
+    }, 2000);
 
 
     window.onscroll = function() {scrollTransition()};
