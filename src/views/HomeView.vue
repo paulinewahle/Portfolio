@@ -15,6 +15,7 @@ export default{
   mounted() {
     document.querySelector(".arrow-cursor").style.display = "none";
     document.querySelector(".cursor").style.display = "block";
+    document.querySelector(".work-view").style.display = "none";
 
     setTimeout(() => {
       document.querySelector('#transitionScreen').style.opacity = "0";

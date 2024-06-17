@@ -24,14 +24,6 @@ export default {
     this.links.push(document.querySelector('#home'));
     },
     methods:{
-    scrollDown(){
-        setTimeout(() => {
-        document.documentElement.scrollTop = document.documentElement.scrollHeight - window.innerHeight / 1.2;
-        }, 1);
-    },
-    scrollUp(){
-        document.documentElement.scrollTop = 0;
-    },
     responsiveNav(){
             if(this.navActive === false){
                 this.navActive = true
@@ -55,7 +47,7 @@ export default {
                 hamburger[0].style.marginTop = "0";
                 hamburger[2].style.marginTop = "0";
             }
-        }
+        },
     }
         
     
@@ -74,11 +66,10 @@ export default {
                 <span />
                 <span />
             </div>
-        <RouterLink  class="desktop" id="home" to="/home" @click="scrollUp();">PAULINE WAHLE</RouterLink>
-        <RouterLink class="responsive" id="header-title" to="/home" @click="responsiveNav()"> PAULINE WAHLE </RouterLink>
+        <RouterLink  class="desktop" id="home" to="/home">PAULINE WAHLE</RouterLink>
+        <RouterLink class="responsive" id="header-title" to="/home"> PAULINE WAHLE </RouterLink>
         <nav class="desktop">
-            <RouterLink to="/home" :class="{ 'active-site': currentSite === 'home' }" 
-            @click="scrollDown(); currentSite = 'home'" id="work">Work</RouterLink>
+            <RouterLink to="/work" @click="currentSite = 'work'" :class="{ 'active-site': currentSite === 'work' }" id="work">Work</RouterLink>
             <RouterLink to="/about" @click="currentSite = 'about'" :class="{ 'active-site': currentSite === 'about' }" id="about">About</RouterLink>
         </nav>
         <ThemeToggle/>

@@ -120,7 +120,7 @@ export default{
 }
 @media (min-width: 1024px){
   .work-view{
-  display: none;
+  display: flex;
   position: fixed;
   top: 0;
   height: 100vh;
